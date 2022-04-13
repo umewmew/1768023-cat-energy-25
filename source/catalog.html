@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="./css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -26,13 +27,13 @@
         </button>
           <ul class="main-header__navigation menu-services-list">
             <li class="menu-services__item">
-              <a href="index.html">Главная</a>
+              <a class="menu-services__link" href="index.html">Главная</a>
             </li>
             <li class="menu-services__item">
-              <a>Каталог продукции</a>
+              <a class="menu-services__link">Каталог продукции</a>
             </li>
             <li class="menu-services__item">
-              <a href="program-form.html">Подбор программы</a>
+              <a class="menu-services__link" href="program-form.html">Подбор программы</a>
             </li>
           </ul>
       </div>
@@ -60,7 +61,7 @@
             <dd class="properties-list__value">700 Р.</dd>
           </dl>
 
-          <a class="catalog__product-order" href="order-form.html">Заказать</a>
+          <a class="catalog__product-order button-order" href="order-form.html">Заказать</a>
         </div>
 
         <div class="catalog__product">
@@ -78,7 +79,7 @@
             <dd class="properties-list__value">1000 Р.</dd>
           </dl>
 
-          <a class="catalog__product-order" href="order-form.html">Заказать</a>
+          <a class="catalog__product-order button-order" href="order-form.html">Заказать</a>
         </div>
 
         <div class="catalog__product">
@@ -96,7 +97,7 @@
             <dd class="properties-list__value">700 Р.</dd>
           </dl>
 
-          <a class="catalog__product-order" href="order-form.html">Заказать</a>
+          <a class="catalog__product-order button-order" href="order-form.html">Заказать</a>
         </div>
 
         <div class="catalog__product">
@@ -114,7 +115,7 @@
             <dd class="properties-list__value">1000 Р.</dd>
           </dl>
 
-          <a class="catalog__product-order" href="order-form.html">Заказать</a>
+          <a class="catalog__product-order button-order" href="order-form.html">Заказать</a>
         </div>
 
         <div class="catalog__product">
@@ -132,7 +133,7 @@
             <dd class="properties-list__value">400 Р.</dd>
           </dl>
 
-          <a class="catalog__product-order" href="order-form.html">Заказать</a>
+          <a class="catalog__product-order button-order" href="order-form.html">Заказать</a>
         </div>
 
         <div class="catalog__product">
@@ -150,7 +151,7 @@
             <dd class="properties-list__value">700 Р.</dd>
           </dl>
 
-          <a class="catalog__product-order" href="order-form.html">Заказать</a>
+          <a class="catalog__product-order button-order" href="order-form.html">Заказать</a>
         </div>
 
         <div class="catalog__product">
@@ -168,7 +169,7 @@
             <dd class="properties-list__value">500 Р.</dd>
           </dl>
 
-          <a class="catalog__product-order" href="order-form.html">Заказать</a>
+          <a class="catalog__product-order button-order" href="order-form.html">Заказать</a>
         </div>
 
         <div class="catalog__show-more">
@@ -183,41 +184,44 @@
       <section class="other-product">
         <h2 class="other-product__title">Дополнительные товары</h2>
 
-        <div class="other-product__item">
-          <span class="other-product__item-title">Сахарозаменитель</span>
-          <dl class="other-product__item properties-other-product">
-            <dt class="properties-other-product__name">1 упаковка (100 г)</dt>
-            <dd class="properties-other-product__price">200 р.</dd>
-          </dl>
-          <a class="catalog__product-order" href="order-form.html">Заказать</a>
-        </div>
+        <ul class="other-product__list">
+          <li class="other-product__item">
+            <h3 class="other-product__item-title">Сахарозаменитель</h3>
+            <dl class="other-product__item properties-other-product">
+              <dt class="properties-other-product__name">1 упаковка (100 г)</dt>
+              <dd class="properties-other-product__price">200 р.</dd>
+            </dl>
+            <a class="other-product__button button-order" href="order-form.html">Заказать</a>
+          </li>
 
-        <div class="other-product__item">
-          <span class="other-product__item-title">Питьевая вода</span>
-          <dl class="other-product__item properties-other-product">
-            <dt class="properties-other-product__name">5 литров</dt>
-            <dd class="properties-other-product__price">50 р.</dd>
-          </dl>
-          <a class="catalog__product-order" href="order-form.html">Заказать</a>
-        </div>
 
-        <div class="other-product__item">
-          <span class="other-product__item-title">Молоко</span>
-          <dl class="other-product__item properties-other-product">
-            <dt class="properties-other-product__name">1 литр</dt>
-            <dd class="properties-other-product__price">100 р.</dd>
-          </dl>
-          <a class="catalog__product-order" href="order-form.html">Заказать</a>
-        </div>
+          <li class="other-product__item">
+            <h3 class="other-product__item-title">Питьевая вода</h3>
+            <dl class="other-product__item properties-other-product">
+              <dt class="properties-other-product__name">5 литров</dt>
+              <dd class="properties-other-product__price">50 р.</dd>
+            </dl>
+            <a class="other-product__button button-order" href="order-form.html">Заказать</a>
+          </li>
 
-        <div class="other-product__item">
-          <span class="other-product__item-title">Витамины</span>
-          <dl class="other-product__item properties-other-product">
-            <dt class="properties-other-product__name">1 упаковка (30 г)</dt>
-            <dd class="properties-other-product__price">300 р.</dd>
-          </dl>
-          <a class="catalog__product-order" href="order-form.html">Заказать</a>
-        </div>
+          <li class="other-product__item">
+            <h3 class="other-product__item-title">Молоко</h3>
+            <dl class="other-product__item properties-other-product">
+              <dt class="properties-other-product__name">1 литр</dt>
+              <dd class="properties-other-product__price">100 р.</dd>
+            </dl>
+            <a class="other-product__button button-order" href="order-form.html">Заказать</a>
+          </li>
+
+          <li class="other-product__item">
+            <h3 class="other-product__item-title">Витамины</h3>
+            <dl class="other-product__item properties-other-product">
+              <dt class="properties-other-product__name">1 упаковка (30 г)</dt>
+              <dd class="properties-other-product__price">300 р.</dd>
+            </dl>
+            <a class="other-product__button button-order" href="order-form.html">Заказать</a>
+          </li>
+      </ul>
       </section>
 
       <section class="gift">

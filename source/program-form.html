@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="./css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -26,13 +27,13 @@
         </button>
           <ul class="main-header__navigation menu-services-list">
             <li class="menu-services__item">
-              <a href="index.html">Главная</a>
+              <a class="menu-services__link" href="index.html">Главная</a>
             </li>
             <li class="menu-services__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="menu-services__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="menu-services__item">
-              <a>Подбор программы</a>
+              <a class="menu-services__link">Подбор программы</a>
             </li>
           </ul>
       </div>
@@ -43,22 +44,22 @@
       <h1 class="programm__title">Подбор программы</h1>
       <span class="programm__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</span>
 
-      <form class="program-form" action="https://echo.htmlacademy.ru" method="get">
+      <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="program-form__info information-cat">
           <label class="information-cat__label"> Имя*:
-            <input class="information-cat__field" type="text" name="name" required autocomplete="off" placeholder="Барсик">
+            <input class="information-cat__field" type="text" name="name" required autocomplete="off" placeholder="БАРСИК">
           </label>
 
           <label class="information-cat__label"> Вес (кг)*:
-            <input class="information-cat__field" type="text" name="name" required autocomplete="off" placeholder="7">
+            <input class="information-cat__field" type="text" name="weight" required autocomplete="off" placeholder="7">
           </label>
 
           <label class="information-cat__label"> Возраст (лет):
-            <input class="information-cat__field" type="text" name="name"  autocomplete="off" placeholder="7">
+            <input class="information-cat__field" type="text" name="age"  autocomplete="off" placeholder="7">
           </label>
         </fieldset>
 
-        <fieldset class="program-form offer-select">
+        <fieldset class="program-form__offer offer-select">
           <input class="offer-select__field" type="radio" name="offer-select" value="Похудение" id="weight-loss" checked>
           <label class="offer-select__label" for="weight-loss">Похудение</label>
 
@@ -83,26 +84,26 @@
 
         <fieldset class="program-form__comment comment-text">
           <legend class="comment-text__title">Комментарий</legend>
-          <textarea name="comment text" rows="6" cols="36" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="comment-text__text"name="comment text" rows="6" cols="36" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <fieldset class="program-form__other-product other-product-list">
           <legend class="other-product-list__title">Дополнительно</legend>
 
-          <input class="other-product-list__field" type="radio" name="other-product" id="sweetener" value="Сахарозаменитель" checked>
+          <input class="other-product-list__field" type="checkbox" name="other-product" id="sweetener" value="Сахарозаменитель" checked>
           <label class="other-product-list__label" for="sweetener">Сахарозаменитель</label>
 
-          <input class="other-product-list__field" type="radio" name="other-product" id="water" value="Питьевая вода">
+          <input class="other-product-list__field" type="checkbox" name="other-product" id="water" value="Питьевая вода">
           <label class="other-product-list__label" for="water">Питьевая вода</label>
 
-          <input class="other-product-list__field" type="radio" name="other-product" id="milk" value="Молоко">
+          <input class="other-product-list__field" type="checkbox" name="other-product" id="milk" value="Молоко">
           <label class="other-product-list__label" for="milk">Молоко</label>
 
-          <input class="other-product-list__field" type="radio" name="other-product" id="vitamins" value="Витамины">
+          <input class="other-product-list__field" type="checkbox" name="other-product" id="vitamins" value="Витамины">
           <label class="other-product-list__label" for="vitamins">Витамины</label>
         </fieldset>
 
-        <button class="program-form__button" type="submit">Отправить заявку</button>
+        <button class="program-form__button button-order" type="submit">Отправить заявку</button>
       </form>
 
       <span class="program__postscript">* — Обязательные поля</span>

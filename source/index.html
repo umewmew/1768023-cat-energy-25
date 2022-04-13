@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="./css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -26,13 +27,13 @@
         </button>
           <ul class="main-header__navigation menu-services-list">
             <li class="menu-services__item">
-              <a>Главная</a>
+              <a class="menu-services__link">Главная</a>
             </li>
             <li class="menu-services__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="menu-services__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="menu-services__item">
-              <a href="program-form.html">Подбор программы</a>
+              <a class="menu-services__link" href="program-form.html">Подбор программы</a>
             </li>
           </ul>
       </div>
@@ -40,17 +41,21 @@
     </header>
 
     <main class="main-container">
-      <h1 class="main-container__title">Функциональное питание для котов</h1>
-      <p class="main-container__subtitle">Занялся собой? Займись котом!</p>
-
       <section class="promo">
         <h2 class="visually-hidden">Подбор программы для похудения кота</h2>
-
-        <div class="promo__image">
-          <img src="img/main-product.png" width="280" height="270" alt="Картинка продукции Кэт Энерджи с курицей.">
+        <div class="promo__text">
+          <h1 class="promo__title">Функциональное питание для котов</h1>
+          <p class="promo__subtitle">Занялся собой? Займись котом!</p>
         </div>
 
-        <a class="promo__link-programm" href="program-form.html">Подобрать программу</a>
+        <div class="promo__image-wrapper">
+          <div class="promo__image">
+            <img src="img/main-product.png" width="280" height="270" alt="Картинка продукции Кэт Энерджи с курицей.">
+          </div>
+
+          <a class="promo__link-programm button-order" href="program-form.html">Подобрать программу</a>
+        </div>
+
       </section>
 
       <section class="programm-offer">
@@ -117,11 +122,11 @@
 
         <div class="special__results results-list">
           <dl class="results-list">
-            <dt class="results-list__weight-loss">5 кг</dt>
-            <dd class="results-list__weight-loss-description">Снижения веса</dd>
+            <dt class="results-list__results">5 кг</dt>
+            <dd class="results-list__results-description">Снижения веса</dd>
 
-            <dt class="results-list__results-day-loss">60 дней</dt>
-            <dd class="results-list__results-day-loss-description">Затрачено времени</dd>
+            <dt class="results-list__results">60 дней</dt>
+            <dd class="results-list__results-description">Затрачено времени</dd>
           </dl>
         </div>
 
@@ -136,11 +141,11 @@
           </div>
 
           <div class="special__range-wrapper range-changes">
-            <button class="range-changes__before" type="button">Было</button>
+            <button class="range-changes__before range-button" type="button">Было</button>
 
             <input class="range-changes__range-bar" type="range"><span class="visually-hidden">Потяните, чтобы увидеть изменения</span>
 
-            <button class="range-changes__after" type="button">Стало</button>
+            <button class="range-changes__after range-button" type="button">Стало</button>
           </div>
         </div>
       </section>
