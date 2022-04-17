@@ -8,12 +8,12 @@
 
   font-size: 36px;
   line-height: 40px;
-  color: #000000;
+  color: @black;
   margin-bottom: 40px;
 }
 
 .instruction__description-list {
-  .list-type-none;
+  .list-type-none();
 }
 
 .instruction__description-item:not(:last-child) {
@@ -21,5 +21,13 @@
 }
 
 .instruction__description {
-  .description-text;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Arial", sans-serif;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  color: @dark-grey;
 }
