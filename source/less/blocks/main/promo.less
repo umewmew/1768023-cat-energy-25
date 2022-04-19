@@ -1,0 +1,46 @@
+.promo__text {
+  background-color: @green-light;
+  width: 320px;
+  height: 302px;
+
+  position: relative;
+}
+
+.promo__text::before {
+  content: "";
+  position: absolute;
+
+  background-image: url("../../../img/promo-cat.jpg");
+  background-repeat: no-repeat;
+
+  width: 320px;
+  height: 302px;
+  z-index: -1;
+}
+
+.promo__title {
+  margin: 0;
+
+  font-size: 36px;
+  line-height: 36px;
+
+  font-style: normal;
+  font-weight: 400;
+  color: @white;
+}
+
+.promo__subtitle {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: @white;
+}
+
+.promo__image {
+  display: block;
+  position: relative;
+}
+
+.promo__link-programm {
+  .button-order;
+}
