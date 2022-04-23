@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="./css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -25,6 +26,8 @@
           <span class="visually-hidden">Открыть меню</span>
           <!-- background-image бургер-->
         </button>
+
+        <div class="main-header__navigation-wrapper">
           <ul class="main-header__navigation menu-services-list">
             <li class="menu-services__item">
               <a class="menu-services__link">Главная</a>
@@ -36,17 +39,19 @@
               <a class="menu-services__link" href="program-form.html">Подбор программы</a>
             </li>
           </ul>
+        </div>
       </div>
     </nav>
     </header>
 
-    <main class="main-container">
+    <main class="main-container page-container">
       <section class="promo">
         <h2 class="visually-hidden">Подбор программы для похудения кота</h2>
         <div class="promo__text">
           <h1 class="promo__title">Функциональное питание для котов</h1>
           <p class="promo__subtitle">Занялся собой? Займись котом!</p>
         </div>
+
 
         <div class="promo__image-wrapper">
           <div class="promo__image">
@@ -55,13 +60,13 @@
 
           <a class="promo__link-programm button-order" href="program-form.html">Подобрать программу</a>
         </div>
-
       </section>
 
       <section class="programm-offer">
         <h2 class="visually-hidden">Программы нормализации веса</h2>
 
         <div class="programm-offer__weight-change">
+          <div class="programm-offer__wrapper">
           <!-- background-image: black-cat-weight-loss.png -->
           <h3 class="programm-offer__title">Похудение</h3>
 
@@ -70,9 +75,11 @@
           </p>
 
           <a class="programm-offer__link" href="catalog-weight-loss.html">Каталог SLIM</a>
+          </div>
         </div>
 
         <div class="programm-offer__weight-change">
+          <div class="programm-offer__wrapper">
           <!-- background-image: cat_back-weight-gain.png -->
           <h3 class="programm-offer__title">Набор массы</h3>
 
@@ -81,6 +88,7 @@
           </p>
 
           <a class="programm-offer__link" href="catalog-weight-gain.html">Каталог PRO</a>
+        </div>
         </div>
       </section>
 
@@ -115,6 +123,7 @@
       </section>
 
       <section class="special">
+      <div class="special__text-wrapper">
         <h2 class="special__title">Живой пример</h2>
 
         <p class="special__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
@@ -128,9 +137,10 @@
             <dt class="results-list__results">60 дней</dt>
             <dd class="results-list__results-description">Затрачено времени</dd>
           </dl>
-        </div>
 
-        <span class="special-subtitle">Затраты на питание: 15 000 РУБ. </span>
+          <span class="special-subtitle">Затраты на питание: 15 000 РУБ. </span>
+        </div>
+        </div>
 
         <div class="special__wrapper-slider">
           <div class="special__image-before">

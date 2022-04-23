@@ -1,25 +1,59 @@
-.promo__text {
-  background-color: @green-light;
+.promo {
   width: 320px;
-  height: 302px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 
-  position: relative;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 30px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: 0 110px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 82px;
+  }
 }
 
-.promo__text::before {
-  content: "";
-  position: absolute;
-
-  background-image: url("../../../img/promo-cat.jpg");
-  background-repeat: no-repeat;
-
-  width: 320px;
+.promo__text {
+  background-color: @green-light;
   height: 302px;
-  z-index: -1;
+  width: 320px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../../../img/promo-cat.jpg");
+    background-repeat: no-repeat;
+
+    width: 320px;
+    height: 302px;
+    z-index: -1;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: inherit;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .promo__title {
   margin: 0;
+  padding-top: 27px;
 
   font-size: 36px;
   line-height: 36px;
@@ -27,13 +61,52 @@
   font-style: normal;
   font-weight: 400;
   color: @white;
+
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-top: 62px;
+
+    font-size: 60px;
+    line-height: 60px;
+    color: @black;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @black;
+  }
 }
 
 .promo__subtitle {
+  margin: 0;
+  margin-top: 25px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
   color: @white;
+
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+  }
+}
+
+.promo__image-wrapper {
+  width: 320px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .promo__image {

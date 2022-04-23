@@ -1,6 +1,43 @@
+.programm-offer {
+  width: 320px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    display: flex;
+    margin-bottom: 71px;
+  }
+}
+
 .programm-offer__weight-change {
   background-color: #f2f2f2;
-  padding: 30px 33px 20px 20px;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
+}
+
+.programm-offer__wrapper {
+  padding: 30px 33px 18px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 62px 52px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 41px 50px 50px 50px;
+  }
 }
 
 .programm-offer__weight-change:not(:last-child) {
@@ -16,6 +53,16 @@
 
   text-transform: uppercase;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .programm-offer__description {
@@ -29,6 +76,16 @@
 
   color: @dark-grey;
   margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .programm-offer__link {
@@ -39,4 +96,14 @@
 
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

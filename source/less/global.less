@@ -1,6 +1,10 @@
+html {
+  height: 100%;
+}
+
 body {
   min-height: 100%;
-  margin: 0;
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
@@ -11,6 +15,21 @@ body {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
+}
+
+.page-container {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .visually-hidden {

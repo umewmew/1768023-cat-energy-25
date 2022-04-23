@@ -1,1 +1,21 @@
-//на будущее
+.main-header {
+  display: flex;
+  align-items: center;
+  width: 280px;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 17px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    display: flex;
+    justify-content: space-between;
+
+    .main-header__navigation-toggle {
+      display: none;
+    }
+  }
+}

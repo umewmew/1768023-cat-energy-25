@@ -1,6 +1,31 @@
 .special {
   background-color: @light-gray;
   margin-bottom: 40px;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+
+    .special__wrapper-slider {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    display: flex;
+
+    .special__text-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .special__wrapper-slider {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 .special__title {
@@ -12,10 +37,18 @@
   line-height: 40px;
   margin-bottom: 40px;
   color: @black;
-}
 
-.results-list {
-  margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 76px;
+  }
 }
 
 .special__description {
@@ -29,38 +62,43 @@
 
   color: @dark-grey;
   margin-bottom: 20px;
-}
 
-.results-list__results {
-  font-size: 24px;
-  line-height: 24px;
-}
+  width: 280px;
 
-.results-list__results-description {
-  font-family: "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 12px;
-  color: @dark-grey;
-}
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-.special-subtitle {
-  font-size: 14px;
-  line-height: 20px;
-  text-transform: uppercase;
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .special__wrapper-slider {
   margin-top: 40px;
   margin-bottom: 15px;
-}
 
-.range-button {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
+  .special__image-after {
+    display: none;
+  }
 
-  border: none;
-  background-color: inherit;
+  @media (min-width: @tablet-width) {
+    display: flex;
+
+    .special__image-after {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+
+    .special__image-after {
+      display: block;
+    }
+  }
 }

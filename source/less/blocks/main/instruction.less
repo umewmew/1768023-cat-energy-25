@@ -1,23 +1,72 @@
 .instruction {
   margin-bottom: 49px;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin-bottom: 45px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin-bottom: 0;
+    padding: 0 110px;
+  }
 }
 
 .instruction__title {
   font-style: normal;
   font-weight: 400;
+  margin: 0;
+
 
   font-size: 36px;
   line-height: 40px;
   color: @black;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .instruction__description-list {
   .list-type-none();
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 245px 245px;
+    column-gap: 136px;
+    row-gap: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .instruction__description-item:not(:last-child) {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 250px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 250px;
+  }
 }
 
 .instruction__description {
