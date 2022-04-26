@@ -1,7 +1,16 @@
 .gift {
-  margin-bottom: 35px;
-
   background-color: @green-light;
+
+  height: 280px;
+
+  @media (min-width: @tablet-width) {
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 288px;
+    width: 245px;
+  }
 }
 
 .gift__text {

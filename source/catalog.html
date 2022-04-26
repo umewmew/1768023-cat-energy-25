@@ -41,12 +41,12 @@
     </nav>
     </header>
 
-    <main class="main-inner-container">
+    <main class="main-inner-container page-container">
       <h1 class="main-inner-container__title">Каталог продукции</h1>
 
       <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров питания для котов</h2>
-
+        <div class="catalog__product-wrapper">
         <div class="catalog__product">
           <a class="catalog__image-link" href="product.html">
             <img src="img/catalog/cat-energy-chiken-small.png" width="140" height="112" alt="Кэт Энерджи с курицей, 500 грамм.">
@@ -180,11 +180,14 @@
 
           <a class="catalog__show-more-link" href="new-product.html">Показать все</a>
         </div>
+        </div>
       </section>
 
       <section class="other-product">
         <h2 class="other-product__title">Дополнительные товары</h2>
 
+      <div class="other-product__wrapper">
+      <div class="other-product__wrapper-list">
         <ul class="other-product__list">
           <li class="other-product__item">
             <h3 class="other-product__item-title">Сахарозаменитель</h3>
@@ -223,12 +226,15 @@
             <a class="other-product__button button-order" href="order-form.html">Заказать</a>
           </li>
       </ul>
-      </section>
+      </div>
 
-      <section class="gift">
+      <div class="gift">
         <h2 class="visually-hidden">Акция для покупателя</h2>
         <!-- картинки через background-image -->
         <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
+      </div>
+      </div>
+
       </section>
 
       <footer class="main-footer">
