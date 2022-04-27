@@ -41,12 +41,15 @@
     </nav>
     </header>
 
-    <main class="program">
-      <h1 class="programm__title">Подбор программы</h1>
-      <span class="programm__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</span>
+    <main class="program page-container">
+      <div class="program__text-wrapper">
+      <h1 class="program__title">Подбор программы</h1>
+      <span class="program__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</span>
+      </div>
 
       <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="program-form__info information-cat">
+        <div class="program-form__wrapper">
+        <div class="program-form__info information-cat">
           <label class="information-cat__label"> Имя*:
             <input class="information-cat__field" type="text" name="name" required autocomplete="off" placeholder="БАРСИК">
           </label>
@@ -58,9 +61,9 @@
           <label class="information-cat__label"> Возраст (лет):
             <input class="information-cat__field" type="text" name="age"  autocomplete="off" placeholder="7">
           </label>
-        </fieldset>
+        </div>
 
-        <fieldset class="program-form__offer offer-select">
+        <div class="program-form__offer offer-select">
           <input class="offer-select__field" type="radio" name="offer-select" value="Похудение" id="weight-loss" checked>
           <label class="offer-select__label" for="weight-loss">Похудение</label>
 
@@ -69,9 +72,10 @@
 
           <input class="offer-select__field" type="radio" name="offer-select" id="connect-user" value="Не знаю (Нужен ваш совет)">
           <label class="offer-select__label" for="connect-user">Не знаю (Нужен ваш совет)</label>
-        </fieldset>
+        </div>
+        </div>
 
-        <fieldset class="program-form__info-owner information-owner">
+        <div class="program-form__info-owner information-owner">
         <legend class="information-owner__title">Контактные данные (владельца кота)</legend>
 
         <label class="information-owner__label">E-mail:*
@@ -81,16 +85,17 @@
         <label class="information-owner__label">Телефон:*
           <input class="information-owner__field" type="tel" name="tel" required placeholder="8 (960) 900-60-90">
         </label>
-        </fieldset>
+        </div>
 
-        <fieldset class="program-form__comment comment-text">
+        <div class="program-form__comment comment-text">
           <legend class="comment-text__title">Комментарий</legend>
-          <textarea class="comment-text__text"name="comment text" rows="6" cols="36" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
+          <textarea class="comment-text__text"name="comment text" rows="6" cols="25" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </div>
 
-        <fieldset class="program-form__other-product other-product-list">
+        <div class="program-form__other-product other-product-list">
           <legend class="other-product-list__title">Дополнительно</legend>
 
+        <div class="other-product-list__wrapper">
           <input class="other-product-list__field" type="checkbox" name="other-product" id="sweetener" value="Сахарозаменитель" checked>
           <label class="other-product-list__label" for="sweetener">Сахарозаменитель</label>
 
@@ -102,7 +107,7 @@
 
           <input class="other-product-list__field" type="checkbox" name="other-product" id="vitamins" value="Витамины">
           <label class="other-product-list__label" for="vitamins">Витамины</label>
-        </fieldset>
+        </div>
 
         <button class="program-form__button button-order" type="submit">Отправить заявку</button>
       </form>
