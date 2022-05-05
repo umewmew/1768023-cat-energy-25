@@ -1,39 +1,14 @@
 .promo {
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-
-  @media (min-width: @tablet-width) {
-    width: 768px;
-    padding: 0 30px;
-    margin: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1220px;
-    padding: 0 110px;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 82px;
-  }
-}
-
-.promo__text {
   background-color: @green-light;
-  height: 302px;
-  width: 320px;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    display: block;
-    background-image: url("../../../img/promo-cat.jpg");
-    background-repeat: no-repeat;
-
     width: 320px;
     height: 302px;
+    background-image: url("../../../img/promo-cat.jpg");
+    background-repeat: no-repeat;
     z-index: -1;
   }
 
@@ -46,8 +21,37 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: column;
+    background-color: @green-light;
+    width: 720px;
+    position: relative;
+    margin-bottom: 82px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 302px;
+      background-image: url("../../../img/promo-cat.jpg");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+}
+
+.promo__container {
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
   }
 }
 
@@ -71,9 +75,15 @@
     font-size: 60px;
     line-height: 60px;
     color: @black;
+    text-align: left;
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    width: 525px;
+    padding-top: 111px;
     font-size: 60px;
     line-height: 60px;
     color: @black;
@@ -87,33 +97,50 @@
   line-height: 14px;
   text-transform: uppercase;
   color: @white;
-
+  margin-bottom: 29px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     color: @black;
+    text-align: left;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 52px;
+
     font-size: 20px;
     line-height: 20px;
     color: @black;
+    text-align: left;
   }
-}
-
-.promo__image-wrapper {
-  width: 320px;
-  padding: 0 20px;
-  box-sizing: border-box;
 }
 
 .promo__image {
   display: block;
-  position: relative;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: 500px;
+    bottom: 54px;
+  }
 }
 
 .promo__link-programm {
-  .button-order;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    padding: 14px 26px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    padding: 14px 26px;
+    box-sizing: border-box;
+  }
 }

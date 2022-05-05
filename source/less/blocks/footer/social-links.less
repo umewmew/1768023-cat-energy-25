@@ -1,4 +1,47 @@
 .social-links__list {
   .list-type-none();
   display: flex;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 1px;
+    background-color: #d9d9d9;
+    top: 56px;
+    left: -71px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.social-links__item {
+  margin-right: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// стилизация состояний кнопок на соц.сети
+.social-links__svg {
+  fill: #666666;
+}
+
+.social-links__button:hover .social-links__svg {
+  fill: #68b738;
+}
+
+.social-links__button:active .social-links__svg {
+  fill: #68b738;
+  opacity: 0.3;
 }

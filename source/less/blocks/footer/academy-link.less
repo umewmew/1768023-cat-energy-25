@@ -1,7 +1,37 @@
+.academy-link {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
 .academy-link__text {
   font-size: 16px;
   line-height: 18px;
   color: @dark-grey;
+  margin-right: 140px;
 
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
+}
+
+// стилизация состояний ссылок на академию
+.academy-link__logo svg {
+  fill: #666666;
+}
+
+.academy-link:hover .academy-link__logo svg {
+  fill: #68b738;
+}
+
+.academy-link:active .academy-link__logo svg,
+.academy-link:active .academy-link__text {
+  fill: #68b738;
+  opacity: 0.3;
 }

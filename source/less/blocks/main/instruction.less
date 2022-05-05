@@ -10,7 +10,7 @@
 
   @media (min-width: @desktop-width) {
     width: 1220px;
-    margin-bottom: 0;
+    margin-bottom: 26px;
     padding: 0 110px;
   }
 }
@@ -57,15 +57,21 @@
   }
 }
 
+.instruction__description-item {
+  @media (min-width: @desktop-width) {
+    width: 250px;
+  }
+}
+
 .instruction__description-item:not(:last-child) {
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    width: 250px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 250px;
+    margin: 0;
   }
 }
 

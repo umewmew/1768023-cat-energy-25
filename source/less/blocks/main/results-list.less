@@ -1,10 +1,49 @@
 .results-list {
+  display: flex;
+}
+
+.result-list {
   margin-bottom: 20px;
+  margin-right: 57px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+    margin-right: 42px;
+    width: 162px;
+    height: 72px;
+    text-align: center;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 55px;
+    margin-right: 42px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .results-list__results {
+  font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 11px;
+  }
 }
 
 .results-list__results-description {
@@ -12,4 +51,5 @@
   font-size: 12px;
   line-height: 12px;
   color: @dark-grey;
+  margin: 0;
 }
