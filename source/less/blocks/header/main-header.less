@@ -88,31 +88,26 @@
 // }
 // стилизация меню пользователя
 
-.main-header__navigation {
-  @media (min-width: @tablet-width) {
-    display: flex;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 540px;
-  }
-}
-
 .main-header__navigation-wrapper {
   min-width: 320px;
   position: absolute;
   right: 0;
+  top: 51px;
   z-index: 10;
   background-color: @white;
 
+
   @media (min-width: @tablet-width) {
+    right: 0;
+    top: 0;
     position: relative;
     z-index: 0;
-    min-width: 440px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 478px;
+    z-index: 1;
+    background-color: inherit;
   }
 }
 

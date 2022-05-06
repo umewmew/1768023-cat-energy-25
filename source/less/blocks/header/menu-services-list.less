@@ -2,12 +2,15 @@
   .list-type-none();
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   font-family: "Oswald", sans-serif;
 
   @media (min-width: @tablet-width) {
+    width: 440px;
     display: flex;
+    flex-direction: row;
     text-align: unset;
   }
 
@@ -22,6 +25,7 @@
   padding-bottom: 24px;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -74,7 +78,7 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    color: @black;
+    color: @white;
   }
 }
 
@@ -84,6 +88,6 @@
   border-bottom: 2px solid #68b738;
 
   @media (min-width: @desktop-width) {
-    border-bottom: 2px solid #68b738;
+    border-bottom: 2px solid @white;
   }
 }
