@@ -1,34 +1,54 @@
+.main-footer {
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
 .adress-footer {
-  padding: 26px 20px 26px 20px;
+  padding: 26px 20px;
   display: flex;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    padding: 56px 70px;
     display: flex;
     justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
-    width: 565px;
+    padding: 56px 80px;
     position: absolute;
+    background-color: @white;
+    z-index: 2;
+    top: 93px;
+    left: 110px;
   }
 }
 
 .adress-footer__text {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   line-height: 20px;
-
   text-transform: uppercase;
   color: @black-light;
+  text-align: left;
 
   @media (min-width: @tablet-width) {
+    display: block;
+    width: 171px;
     font-size: 20px;
     line-height: 26px;
+    margin: 0;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 26px;
+    margin: 0;
+    padding: 0;
+    margin-right: 74px;
   }
 }
 
@@ -39,8 +59,11 @@
   font-size: 14px;
   line-height: 20px;
   color: @dark-grey;
+  text-align: end;
 
   @media (min-width: @tablet-width) {
+    width: 160px;
+    display: block;
     font-size: 16px;
     line-height: 20px;
   }
@@ -51,4 +74,25 @@
   }
 }
 
-// тут стили для карты, ждем до определенного раздела
+// стили для карты
+
+.adress-footer__map iframe {
+  border: none;
+  display: block;
+  width: 320px;
+  height: 362px;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    display: block;
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+    display: block;
+    width: 1440px;
+    height: 400px;
+  }
+}

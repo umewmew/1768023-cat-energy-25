@@ -1,57 +1,83 @@
 .promo {
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-
-  @media (min-width: @tablet-width) {
-    width: 768px;
-    padding: 0 30px;
-    margin: 0;
-  }
-
   @media (min-width: @desktop-width) {
-    width: 1220px;
-    padding: 0 110px;
-    display: flex;
-    flex-direction: row;
     margin-bottom: 82px;
   }
 }
 
-.promo__text {
+// стилизация фона зеленого с котейкой
+.promo__background {
   background-color: @green-light;
-  height: 302px;
   width: 320px;
-  position: relative;
+  height: 302px;
+  position: absolute;
+
 
   &::before {
     content: "";
     position: absolute;
-    display: block;
-    background-image: url("../../../img/promo-cat.jpg");
-    background-repeat: no-repeat;
-
     width: 320px;
     height: 302px;
-    z-index: -1;
+    background-image: url("../../../img/promo-cat.jpg");
+    background-repeat: no-repeat;
+    z-index: -3;
   }
 
   @media (min-width: @tablet-width) {
-    background-color: inherit;
-
-    &::before {
-      display: none;
-    }
+    display: none;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: column;
+    background-color: @green-light;
+    width: 720px;
+    height: 694px;
+    display: block;
+    right: 0;
+    bottom: 0;
+
+    position: absolute;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 696px;
+      background-image: url("../../../img/promo-cat-desktop.jpg");
+      background-repeat: no-repeat;
+      z-index: -1;
+      top: -2px;
+    }
   }
 }
 
+
+.promo__container {
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.promo__text-block {
+  z-index: 1;
+}
+
 .promo__title {
+  font-family: "Oswald", sans-serif;
   margin: 0;
   padding-top: 27px;
 
@@ -66,14 +92,20 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    margin-top: 62px;
+    padding-top: 62px;
+    margin-bottom: 42px;
 
     font-size: 60px;
     line-height: 60px;
     color: @black;
+    text-align: left;
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    padding-top: 111px;
     font-size: 60px;
     line-height: 60px;
     color: @black;
@@ -81,39 +113,74 @@
 }
 
 .promo__subtitle {
+  font-family: "Oswald", sans-serif;
   margin: 0;
   margin-top: 25px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
   color: @white;
-
+  margin-bottom: 29px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
     font-size: 20px;
     line-height: 20px;
     color: @black;
+    text-align: left;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 52px;
+
     font-size: 20px;
     line-height: 20px;
     color: @black;
+    text-align: left;
   }
 }
 
-.promo__image-wrapper {
-  width: 320px;
-  padding: 0 20px;
-  box-sizing: border-box;
+.promo__delivery-block {
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
 }
 
+// стилизация картинки с продукцией товара
 .promo__image {
   display: block;
-  position: relative;
+  z-index: 1;
 }
 
+// стилизация кнопки заказа
 .promo__link-programm {
-  .button-order;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    top: 29px;
+    right: 91px;
+    padding: 14px 26px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    padding: 14px 26px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 124px;
+  }
 }

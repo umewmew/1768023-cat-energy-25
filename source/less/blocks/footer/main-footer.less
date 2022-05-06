@@ -20,13 +20,52 @@
   padding-right: 20px;
   padding-bottom: 22px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (min-width: @tablet-width) {
+    padding: 58px 30px 55px 30px;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     align-items: center;
   }
+}
+
+.main-footer__links-logo {
+  position: relative;
+  padding-bottom: 32px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 1px;
+    background-color: #d9d9d9;
+    top: 56px;
+    left: -70px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+// стилизация состояния для логотипа футера
+.main-footer__links-logo:hover {
+  opacity: 0.8;
+}
+
+.main-footer__links-logo:active {
+  opacity: 0.3;
 }

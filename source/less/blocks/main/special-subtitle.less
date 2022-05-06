@@ -1,5 +1,20 @@
 .special-subtitle {
+  font-family: "Oswald", sans-serif;
+  font-style: 400;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
 }
