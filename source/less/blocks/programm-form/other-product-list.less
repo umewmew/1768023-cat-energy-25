@@ -1,47 +1,139 @@
+// стилизация заголовка блока "Дополнительно"
 .other-product-list__title {
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
   margin-bottom: 35px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 136px;
+    background-color: @green;
+    top: 17px;
+    right: -20px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 57px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      background-color: @green;
+      top: 23px;
+      left: -70px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 446px;
+      background-color: @green;
+      top: 23px;
+      right: -70px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 36px;
-    line-height: 36px;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 70px;
+      background-color: @green;
+      top: 23px;
+      left: -110px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 1078px;
+      background-color: @green;
+      top: 23px;
+      right: -110px;
+    }
   }
 }
 
+// стилизация только списков пунктов дополнительных товаров
 .other-product-list__wrapper {
   display: flex;
   flex-direction: column;
+  margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 282px 242px;
+    gap: 32px 61px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
 .other-product-list__label {
+  margin-bottom: 20px;
+  padding-left: 44px;
+  position: relative;
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 0;
+    padding-left: 66px;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 20px;
-    line-height: 30px;
+    padding-left: 59px;
+    width: 221px;
+    box-sizing: border-box;
   }
 }
 
-.other-product-list input {
-  margin-bottom: 20px;
+// стилизация маркеров чекбокса
+.other-product-list__field-mark {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  outline: 1px solid #cdcdcd;
+  left: 0;
+  top: -4px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.other-product-list__field[type="checkbox"]:checked + .other-product-list__field-mark::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  background-image: url("../../../img/form-check-icon.svg");
+  background-repeat: no-repeat;
+  top: 6px;
+  left: 4px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../../img/form-tablet-check-icon.svg");
+    width: 26px;
+    height: 26px;
+    top: 7px;
+    left: 7px;
+  }
 }

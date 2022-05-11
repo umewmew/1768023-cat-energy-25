@@ -9,57 +9,182 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 86px;
+    padding: 0 110px;
   }
 }
 
+// стилизация всего блока
 .other-product__wrapper {
   display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    display: flex;
     flex-direction: column;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: row;
+    border: none;
+    display: grid;
+    grid-template-columns: 896px 245px;
+    gap: 0 79px;
+  }
+}
+// стилизация списка товаров
+.other-product__list {
+  .list-type-none();
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid #cdcdcd;
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    border: none;
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 
+// стилизация заголовка
 .other-product__title {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  padding: 25px 44px 36px 0;
   font-size: 24px;
   line-height: 24px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 320px;
+    background-color: #ebebeb;
+    top: -11px;
+    right: -20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 53px;
+    background-color: rgba(104, 183, 56, 1);
+    top: 41px;
+    right: -20px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    padding: 0;
+    margin: 0;
     margin-bottom: 80px;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 328px;
+      background-color: rgba(104, 183, 56, 1);
+      top: 25px;
+      right: -30px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      background-color: rgba(104, 183, 56, 1);
+      top: 25px;
+      left: -40px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 36px;
-    line-height: 36px;
-    margin-bottom: 80px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 81px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 957px;
+      background-color: rgba(104, 183, 56, 1);
+      top: 25px;
+      right: -110px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 70px;
+      background-color: rgba(104, 183, 56, 1);
+      top: 25px;
+      left: -110px;
+    }
   }
 }
 
-.other-product__list {
-  .list-type-none();
-}
 
-.other-product__item:not(:last-child) {
-  margin-bottom: 31px;
+// стилизация одного пункта товара
+.other-product__item {
+  padding-top: 12px;
+  padding-bottom: 19px;
+  border-top: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 36px 28px 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 17px 0;
+  }
 }
 
 .other-product__item-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
 
   color: @black-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .other-product__button {
   .button-order;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+  }
 }

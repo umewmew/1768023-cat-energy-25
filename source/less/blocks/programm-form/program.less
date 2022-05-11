@@ -1,77 +1,75 @@
-.program {
-  padding: 0 20px;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: column;
-    width: 1220px;
-    padding: 0 110px;
-  }
-}
-
+// стилизация заголовка "Подбор программы"
 .program__title {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
   margin: 0;
+  margin-bottom: 37px;
 
   font-size: 36px;
   line-height: 36px;
 
-  font-style: normal;
-  font-weight: 400;
-  margin-bottom: 37px;
+  padding: 27px 40px 0 20px;
+  border-top: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     margin: 0;
+    margin-top: 64px;
     margin-bottom: 54px;
+    padding: 0;
+    padding-left: 70px;
+
+    border: none;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 60px;
-    line-height: 60px;
     margin: 0;
+    padding-left: 110px;
+    margin-top: 74px;
     margin-bottom: 56px;
   }
 }
 
+// стилизация подписи
 .program__subtitle {
+  font-family: "Oswald", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-
+  width: 226px;
   display: block;
   margin-bottom: 39px;
+  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 70px;
     margin: 0;
     margin-bottom: 66px;
     width: 323px;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 20px;
-    line-height: 30px;
-    margin: 0;
-    margin-bottom: 66px;
-    width: 323px;
+    padding-left: 110px;
   }
 }
 
+// стилизация подписи после формы
 .program__postscript {
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 32px;
+  display: block;
+  text-align: center;
+  text-transform: none;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
+    margin-top: 41px;
   }
 
   @media (min-width: @desktop-width) {

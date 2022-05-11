@@ -1,30 +1,142 @@
+// стилизация заголовка "Контактные данные (владельца кота)"
 .information-owner__title {
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
+  margin: 0;
   margin-bottom: 35px;
+  padding-top: 29px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 99px;
+    background-color: @green;
+    top: 47px;
+    right: -20px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-  }
+    margin-bottom: 76px;
+    padding: 0;
 
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      background-color: @green;
+      top: 23px;
+      left: -70px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 145px;
+      background-color: @green;
+      top: 23px;
+      right: -70px;
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 70px;
+        background-color: @green;
+        top: 23px;
+        left: -110px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 778px;
+        background-color: @green;
+        top: 23px;
+        right: -110px;
+      }
+    }
+  }
+}
+
+.information-owner__wrapper {
   @media (min-width: @desktop-width) {
-    font-size: 36px;
-    line-height: 36px;
+    display: grid;
+    grid-template-columns: 559px 572px;
+    column-gap: 78px;
   }
 }
 
 .information-owner label {
   color: @dark-grey;
+  display: flex;
+  align-items: baseline;
+}
+
+.information-owner input {
+  height: 40px;
+  padding-left: 14px;
+  margin-left: 5px;
   margin-bottom: 14px;
+  flex-grow: 1;
+
+  border: none;
+  outline: 1px solid #cdcdcd;
+
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
+    padding-left: 21px;
+    margin-left: 18px;
+    flex-grow: 1;
   }
 
   @media (min-width: @desktop-width) {
+    flex-grow: 1;
+  }
+}
+
+// стилизация картинок внутри input
+.information-owner__email-field {
+  position: relative;
+  background-image: url("../img/form-email-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 190px center;
+
+  @media (min-width: @tablet-width) {
+    background-position: 514px center;
+  }
+}
+
+.information-owner__tel-field {
+  position: relative;
+  background-image: url("../img/form-phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 171px center;
+
+  @media (min-width: @tablet-width) {
+    background-position: 498px center;
+  }
+}
+
+// стилизация текста внутри input
+.information-owner__email-field::placeholder,
+.information-owner__tel-field::placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }

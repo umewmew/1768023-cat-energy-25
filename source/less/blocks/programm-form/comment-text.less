@@ -1,26 +1,94 @@
+// стилизация заголовка блока "Комментарий"
 .comment-text__title {
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
   margin-bottom: 35px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: @green;
+    width: 158px;
+    top: 15px;
+    right: -20px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 76px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      background-color: @green;
+      top: 23px;
+      left: -70px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 478px;
+      background-color: @green;
+      top: 23px;
+      right: -70px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 36px;
-    line-height: 36px;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 70px;
+      background-color: @green;
+      top: 23px;
+      left: -110px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 1108px;
+      background-color: @green;
+      top: 23px;
+      right: -110px;
+    }
   }
 }
 
+//  стилизация формы для отправки комментария
 .comment-text__text {
+  width: 100%;
+  min-height: 150px;
+  font-family: "Oswald", sans-serif;
+  line-height: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
+  color: @dark-grey;
 
   text-transform: uppercase;
-  color: @dark-grey;
+  text-align: center;
+
+  border: none;
+  outline: 1px solid #e7e7e7;
+
+  padding-top: 9px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 19px;
+    text-align: start;
+  }
 }
