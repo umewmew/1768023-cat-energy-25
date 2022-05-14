@@ -12,10 +12,11 @@
     content: "";
     position: absolute;
     height: 2px;
-    width: 99px;
+    width: 100vw;
     background-color: @green;
-    top: 47px;
-    right: -20px;
+    top: 44px;
+    left: 221px;
+    z-index: -1;
   }
 
   @media (min-width: @tablet-width) {
@@ -28,20 +29,21 @@
       content: "";
       position: absolute;
       height: 2px;
-      width: 30px;
       background-color: @green;
       top: 23px;
+      width: 30px;
       left: -70px;
+      z-index: -1;
     }
 
     &::before {
       content: "";
       position: absolute;
       height: 2px;
-      width: 145px;
+      width: 100vw;
       background-color: @green;
       top: 23px;
-      right: -70px;
+      left: 553px;
     }
 
     @media (min-width: @desktop-width) {
@@ -49,20 +51,20 @@
         content: "";
         position: absolute;
         height: 2px;
-        width: 70px;
         background-color: @green;
         top: 23px;
+        width: 70px;
         left: -110px;
+        z-index: -1;
       }
 
       &::before {
         content: "";
         position: absolute;
         height: 2px;
-        width: 778px;
         background-color: @green;
         top: 23px;
-        right: -110px;
+        left: 550px;
       }
     }
   }
@@ -90,18 +92,13 @@
   flex-grow: 1;
 
   border: none;
-  outline: 1px solid #cdcdcd;
+  outline: 1px solid @silver-gray;
 
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     padding-left: 21px;
     margin-left: 18px;
-    flex-grow: 1;
-  }
-
-  @media (min-width: @desktop-width) {
-    flex-grow: 1;
   }
 }
 

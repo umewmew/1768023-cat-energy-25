@@ -12,8 +12,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
     padding: 0 110px;
     justify-content: unset;
   }
@@ -29,7 +27,7 @@
     position: absolute;
     height: 1px;
     width: 320px;
-    background-color: #ebebeb;
+    background-color: @silver-gray-light;
     top: -11px;
     right: -20px;
   }
@@ -74,7 +72,6 @@
 
   @media (min-width: @desktop-width) {
     margin-top: -80px;
-    margin-bottom: 33px;
   }
 }
 
@@ -135,7 +132,7 @@
     position: absolute;
     height: 1px;
     width: 320px;
-    background-color: #ebebeb;
+    background-color: @silver-gray-light;
     top: -11px;
     right: -20px;
   }
@@ -158,10 +155,8 @@
     }
 
     &::after {
-      content: "";
       top: 52px;
       left: 132px;
-      position: absolute;
       width: 60px;
       height: 60px;
       background-image: url("../img/catalog-big-plus.svg");

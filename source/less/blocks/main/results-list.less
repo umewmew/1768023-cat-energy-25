@@ -1,8 +1,10 @@
+// позиционирование блока с результатами снижения веса
 .results-list {
   display: flex;
   text-align: center;
 }
 
+// стилизация результатов(элементов) снижения веса
 .result-list {
   margin-bottom: 20px;
   margin-right: 57px;
@@ -17,21 +19,13 @@
     width: 162px;
     height: 72px;
     text-align: center;
-    border: 1px solid #cdcdcd;
+    border: 1px solid @silver-gray;
     border-radius: 5px;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 55px;
     margin-right: 42px;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }
 
@@ -54,4 +48,9 @@
   line-height: 12px;
   color: @dark-grey;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }

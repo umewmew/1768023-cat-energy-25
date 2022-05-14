@@ -5,19 +5,28 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
-  display: block;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    width: 174px;
-    text-transform: uppercase;
     text-align: right;
+    width: 174px;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 20px;
-    line-height: 20px;
-    text-transform: uppercase;
+    width: 327px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.special-subtitle_price {
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin-top: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
   }
 }
