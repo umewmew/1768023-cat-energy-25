@@ -37,31 +37,18 @@
     }
 
     &::before {
-      content: "";
-      position: absolute;
-      height: 2px;
-      width: 100vw;
-      background-color: @green;
       top: 23px;
       left: 553px;
     }
 
     @media (min-width: @desktop-width) {
       &::after {
-        content: "";
-        position: absolute;
-        height: 2px;
-        background-color: @green;
         top: 23px;
         width: 70px;
         left: -110px;
-        z-index: -1;
       }
 
       &::before {
-        content: "";
-        position: absolute;
-        height: 2px;
         background-color: @green;
         top: 23px;
         left: 550px;
