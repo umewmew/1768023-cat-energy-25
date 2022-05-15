@@ -10,7 +10,6 @@
 
   @media (min-width: @tablet-width) {
     padding: 56px 70px;
-    display: flex;
     justify-content: space-between;
   }
 
@@ -21,6 +20,15 @@
     z-index: 2;
     top: 93px;
     left: 110px;
+  }
+}
+
+// стилизация для фона в футере каталога
+.adress-footer__catalog {
+  background-color: @basic-grey;
+
+  @media (min-width: @desktop-width) {
+    background-color: @white;
   }
 }
 
@@ -39,15 +47,9 @@
     width: 171px;
     font-size: 20px;
     line-height: 26px;
-    margin: 0;
-    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 20px;
-    line-height: 26px;
-    margin: 0;
-    padding: 0;
     margin-right: 74px;
   }
 }
@@ -65,12 +67,6 @@
     width: 160px;
     display: block;
     font-size: 16px;
-    line-height: 20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    font-size: 16px;
-    line-height: 20px;
   }
 }
 
@@ -79,20 +75,10 @@
 .adress-footer__map iframe {
   border: none;
   display: block;
-  width: 320px;
+  width: 100%;
   height: 362px;
 
   @media (min-width: @tablet-width) {
-    border: none;
-    display: block;
-    width: 768px;
-    height: 400px;
-  }
-
-  @media (min-width: @desktop-width) {
-    border: none;
-    display: block;
-    width: 1440px;
     height: 400px;
   }
 }

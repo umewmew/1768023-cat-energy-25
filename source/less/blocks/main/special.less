@@ -1,25 +1,42 @@
+// фоновый цвет
 .special {
   background-color: @light-gray;
-  padding-bottom: 40px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   @media (min-width: @tablet-width) {
-    background-color: inherit;
+    background-image: linear-gradient(@white 462px, @light-gray 81px);
   }
 
   @media (min-width: @desktop-width) {
-    background-color: @light-gray;
+    background-image: linear-gradient(@white 76px, @light-gray 64px);
+  }
+}
+
+.special__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    padding-bottom: 55px;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
+    padding: 0 110px;
+    padding-bottom: 75px;
+    margin: 0 auto;
+    width: 1220px;
   }
 }
 
 // стилизация текстов
 .special__text-wrapper {
-  padding: 25px 20px 0 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
@@ -31,8 +48,12 @@
 }
 
 .special__results-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (min-width: @tablet-width) {
-    display: flex;
+    flex-direction: row;
     align-items: baseline;
 
     .special__results {
@@ -41,7 +62,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
     flex-direction: column;
   }
 }
@@ -64,8 +84,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 60px;
-    line-height: 60px;
     margin-bottom: 76px;
     text-align: start;
   }
@@ -94,16 +112,7 @@
 
   @media (min-width: @desktop-width) {
     width: 436px;
-    font-size: 16px;
-    line-height: 24px;
     margin-bottom: 69px;
-  }
-}
-
-// серый фоновый цвет
-.special__wrapper-background {
-  @media (min-width: @tablet-width) {
-    background-color: @light-gray;
   }
 }
 
@@ -115,12 +124,12 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: relative;
     top: -56px;
-    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
   }
 }
 
@@ -133,7 +142,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
     margin-bottom: 25px;
   }
 }
@@ -142,10 +150,6 @@
   display: none;
 
   @media (min-width: @tablet-width) {
-    display: block;
-  }
-
-  @media (min-width: @desktop-width) {
     display: block;
   }
 }

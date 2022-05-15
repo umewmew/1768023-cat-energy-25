@@ -8,14 +8,11 @@
   </head>
   <body class="page-body">
     <header class="main-header">
-
-      <div class="main-header__logo">
+      <div class="main-header__logo-wrapper">
         <a href="index.html">
           <img class="main-header__logo-picture" src="img/header-img/logo-mobile.svg" width="33" height="37" alt="Логотип сайта Кэт Энерджи.">
         </a>
-      </div>
 
-      <div class="main-header__logo-text">
         <a href="index.html">
           <img class="main-header__logo-title" src="img/header-img/logo-title.svg" width="101" height="18" alt="Название сайта Кэт Энерджи.">
         </a>
@@ -31,13 +28,13 @@
         <div class="main-header__navigation-wrapper">
           <ul class="main-header__navigation-list menu-services-list">
             <li class="menu-services__item">
-              <a class="menu-services__link active-link">Главная</a>
+              <a class="menu-services__link--index menu-services__link active-link--index">Главная</a>
             </li>
             <li class="menu-services__item">
-              <a class="menu-services__link" href="catalog.html">Каталог продукции</a>
+              <a class="menu-services__link--index menu-services__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="menu-services__item">
-              <a class="menu-services__link" href="program-form.html">Подбор программы</a>
+              <a class="menu-services__link--index menu-services__link" href="program-form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -45,7 +42,7 @@
     </nav>
     </header>
 
-    <main class="main-container page-container">
+    <main class="main-container">
       <section class="promo">
         <h2 class="visually-hidden">Подбор программы для похудения кота</h2>
         <div class="promo__container">
@@ -64,7 +61,7 @@
         </div>
       </section>
 
-      <section class="programm-offer">
+      <section class="programm-offer page-container">
         <h2 class="visually-hidden">Программы нормализации веса</h2>
 
         <div class="programm-offer__weight-change">
@@ -94,7 +91,7 @@
         </div>
       </section>
 
-      <section class="instruction">
+      <section class="instruction page-container">
         <h2 class="instruction__title">Как это работает</h2>
 
         <ul class="instruction__description-list">
@@ -125,6 +122,8 @@
       </section>
 
       <section class="special">
+        <div class="special__wrapper">
+
       <div class="special__text-wrapper">
         <h2 class="special__title">Живой пример</h2>
 
@@ -135,20 +134,21 @@
         <div class="special__results results-list">
           <dl class="result-list">
             <dt class="results-list__results">5 кг</dt>
-            <dd class="results-list__results-description">Снижения веса</dd>
+            <dd class="results-list__results-description">снижения веса</dd>
           </dl>
 
           <dl class="result-list">
             <dt class="results-list__results">60 дней</dt>
-            <dd class="results-list__results-description">Затрачено времени</dd>
+            <dd class="results-list__results-description">затрачено времени</dd>
           </dl>
           </div>
 
-          <span class="special-subtitle">Затраты на питание: 15 000 РУБ. </span>
+          <p class="special-subtitle">Затраты на питание:
+            <span class="special-subtitle_price">15 000 РУБ. </span>
+          </p>
         </div>
         </div>
 
-        <div class="special__wrapper-background">
         <div class="special__wrapper-slider">
         <div class="special__image-wrapper">
           <div class="special__image-before">
@@ -172,7 +172,7 @@
     </main>
 
     <footer class="main-footer">
-      <div class="adress-footer">
+      <div class="adress-footer ">
           <p class="adress-footer__text">приглашаем к сотрудничеству  дилеров!</p>
           <address class="adress-footer__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
@@ -182,6 +182,7 @@
         title="Как добраться до офиса"></iframe>
     </div>
 
+    <div class="main-footer__background">
     <div class="main-footer__links">
 
       <a class="main-footer__links-logo" href="index.html">
@@ -224,6 +225,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 60 60"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
         </a>
       </div>
+    </div>
     </div>
     </footer>
     <script src="./js/script.js"></script>

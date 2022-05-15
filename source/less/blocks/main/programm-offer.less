@@ -16,7 +16,7 @@
 }
 
 .programm-offer__weight-change {
-  background-color: #f2f2f2;
+  background-color: @basic-grey;
   width: 280px;
   margin: 0 auto;
 
@@ -71,11 +71,6 @@
     font-size: 36px;
     line-height: 36px;
   }
-
-  @media (min-width: @desktop-width) {
-    font-size: 36px;
-    line-height: 36px;
-  }
 }
 
 .programm-offer__description {
@@ -91,11 +86,6 @@
   margin-bottom: 38px;
 
   @media (min-width: @tablet-width) {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 24px;
   }
@@ -117,7 +107,8 @@
     position: absolute;
     width: 24px;
     height: 12px;
-    background-image: url("../../../img/arrow-black.svg");
+    background-image: url("../img/arrow-black.svg");
+    background-repeat: no-repeat;
     top: 2px;
     left: 124px;
   }
@@ -126,31 +117,11 @@
     font-size: 20px;
     line-height: 30px;
 
-    padding: 4px 57px 8px 0;
+    padding: 4px 46px 8px 0;
 
     &::before {
-      content: "";
-      position: absolute;
-      width: 24px;
-      height: 12px;
-      background-image: url("../../../img/arrow-black.svg");
       top: 12px;
-      left: 144px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    font-size: 20px;
-    line-height: 30px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 24px;
-      height: 12px;
-      background-image: url("../../../img/arrow-black.svg");
-      top: 12px;
-      left: 144px;
+      left: 133px;
     }
   }
 }
@@ -162,22 +133,13 @@
     position: absolute;
     width: 32px;
     height: 12px;
-    background-image: url("../../../img/arrow-black-hover.svg");
+    background-image: url("../img/arrow-black-hover.svg");
+    background-repeat: no-repeat;
     top: 8;
-    left: 165px;
+    left: 133px;
   }
 }
 
 .programm-offer__link:active {
   opacity: 0.3;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 10px;
-    background-image: url("../../../img/arrow-black-hover.svg");
-    top: 8;
-    left: 165px;
-  }
 }

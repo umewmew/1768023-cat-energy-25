@@ -1,6 +1,19 @@
 .properties-other-product {
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
 
   color: @dark-grey;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    justify-content: unset;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }

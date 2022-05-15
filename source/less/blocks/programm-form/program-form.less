@@ -1,39 +1,85 @@
-.program-form,
-.program-form__info,
-.program-form__info-owner {
+.program-form {
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
+
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    padding: 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
 }
 
-.program-form__wrapper {
+.program-form__cat-data {
   @media (min-width: @desktop-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 569px 568px;
+    column-gap: 80px;
+  }
+}
+
+.program-form__info-owner {
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
   }
 }
 
 .program-form__offer {
-  margin-bottom: 45px;
-  display: flex;
-  flex-direction: column;
-}
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
 
-.program-form__info-owner {
-  margin-bottom: 22px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 90px;
+  }
 }
 
 .program-form__comment {
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .program-form__other-product {
-  margin-bottom: 21px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
 }
 
+.program-form__text-contain {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+// стилизация кнопки отправки формы
 .program-form__button {
   .button-order;
   border: none;
+  width: 280px;
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    margin-top: 31px;
+    padding: 13px 42px;
+    margin-right: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    margin-right: 84px;
+  }
 }

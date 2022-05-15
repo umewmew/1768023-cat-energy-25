@@ -17,7 +17,7 @@
     position: absolute;
     width: 320px;
     height: 302px;
-    background-image: url("../../../img/promo-cat.jpg");
+    background-image: url("../img/promo-cat.jpg");
     background-repeat: no-repeat;
     z-index: -3;
   }
@@ -41,7 +41,7 @@
       position: absolute;
       width: 720px;
       height: 696px;
-      background-image: url("../../../img/promo-cat-desktop.jpg");
+      background-image: url("../img/promo-cat-desktop.jpg");
       background-repeat: no-repeat;
       z-index: -1;
       top: -2px;
@@ -61,13 +61,10 @@
 
   @media (min-width: @tablet-width) {
     width: 709px;
-    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
     width: 1220px;
-    margin: 0 auto;
-    display: flex;
     flex-direction: row;
   }
 }
@@ -91,7 +88,6 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
     padding-top: 62px;
     margin-bottom: 42px;
 
@@ -102,13 +98,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
     margin-bottom: 40px;
     padding: 0;
     padding-top: 111px;
-    font-size: 60px;
-    line-height: 60px;
-    color: @black;
   }
 }
 
@@ -124,7 +116,6 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
     padding: 0;
     font-size: 20px;
     line-height: 20px;
@@ -133,14 +124,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
-    margin: 0;
     margin-bottom: 52px;
-
-    font-size: 20px;
-    line-height: 20px;
-    color: @black;
-    text-align: left;
   }
 }
 
@@ -148,10 +132,6 @@
   z-index: 1;
 
   @media (min-width: @tablet-width) {
-    position: relative;
-  }
-
-  @media (min-width: @desktop-width) {
     position: relative;
   }
 }
@@ -177,10 +157,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 244px;
-    padding: 14px 26px;
-    box-sizing: border-box;
-    position: absolute;
     right: 124px;
   }
 }

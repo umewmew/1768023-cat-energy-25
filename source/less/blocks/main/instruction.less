@@ -1,11 +1,13 @@
 .instruction {
+  margin: 0 auto;
   margin-bottom: 49px;
-  width: 320px;
+  padding: 0 20px;
+  width: 280px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
     margin-bottom: 90px;
     padding: 0 30px;
+    width: 708px;
   }
 
   @media (min-width: @desktop-width) {
@@ -28,18 +30,12 @@
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
     margin-bottom: 32px;
     font-size: 60px;
     line-height: 60px;
-    text-align: start;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
-    margin-bottom: 32px;
-    font-size: 60px;
-    line-height: 60px;
     text-align: start;
   }
 }
@@ -76,10 +72,6 @@
   @media (min-width: @tablet-width) {
     margin: 0;
   }
-
-  @media (min-width: @desktop-width) {
-    margin: 0;
-  }
 }
 
 .instruction__description {
@@ -92,4 +84,9 @@
   line-height: 18px;
 
   color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

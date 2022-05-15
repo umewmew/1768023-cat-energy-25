@@ -1,19 +1,57 @@
+// стилизация блока данных о коте
 .information-cat {
-  margin-bottom: 50px;
+  padding-bottom: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 320px;
+    background-color: @silver-gray-light;
+    bottom: 12px;
+    right: -20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      display: none;
+    }
+    margin-bottom: 47px;
+  }
 }
 
 .information-cat label {
   color: @dark-grey;
-
+  margin: 0;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.information-cat input {
+  min-height: 40px;
+  padding-left: 13px;
+  margin-left: 5px;
+  flex-grow: 1;
+  border: none;
+  outline: 1px solid @outline-gray;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 18px;
     font-size: 20px;
     line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 20px;
-    line-height: 30px;
+    padding-left: 20px;
+    margin-left: 13px;
   }
 }

@@ -1,14 +1,75 @@
-.offer-select__label {
-  font-size: 16px;
-  line-height: 18px;
+.offer-select {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  padding-bottom: 17px;
+  position: relative;
+  box-sizing: border-box;
 
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 320px;
+    background-color: @silver-gray-light;
+    bottom: 0;
+    right: -20px;
   }
 
-  @media (min-width: @desktop-width) {
-    font-size: 20px;
-    line-height: 30px;
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    border: 1px solid @outline-gray;
+    padding-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.offer-select__label {
+  color: @black-dark-grey;
+  padding-left: 45px;
+  margin-bottom: 19px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 59px;
+  }
+}
+
+// стилизация маркеров
+.offer-select__control-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @silver-gray;
+  border-radius: 50%;
+  left: 0;
+  top: -8px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: -10px;
+  }
+}
+
+// стилизация выбранного пункта
+.offer-select__field[type="radio"]:checked + .offer-select__control-mark::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: @green;
+  top: 8px;
+  left: 8px;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
   }
 }

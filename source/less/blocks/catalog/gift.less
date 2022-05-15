@@ -1,23 +1,83 @@
 .gift {
   background-color: @green-light;
+  height: 289px;
+  position: relative;
 
-  height: 280px;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/catalog-icon-gift.svg");
+    background-repeat: no-repeat;
+    width: 78px;
+    height: 80px;
+    top: 58px;
+    left: 101px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/catalog-cat-background.jpg");
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 289px;
+    z-index: -2;
+  }
+
 
   @media (min-width: @tablet-width) {
-    height: 200px;
+    height: 202px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/catalog-tablet-cat-background.jpg");
+      background-repeat: no-repeat;
+      width: 707px;
+      height: 202px;
+      z-index: -2;
+    }
   }
 
   @media (min-width: @desktop-width) {
     height: 288px;
     width: 245px;
+
+    &::after {
+      background-image: url("../img/catalog-icon-gift.svg");
+      top: 55px;
+      left: 81px;
+    }
+
+    &::before {
+      background-image: url("../img/catalog-desktop-cat-background.jpg");
+      width: 245px;
+      height: 288px;
+    }
   }
 }
 
-.gift__text {
-  padding: 0;
-
+.gift__text-link {
+  font-family: "Arial", sans-serif;
+  display: block;
+  margin: 0 auto;
+  width: 161px;
+  text-decoration: none;
   font-size: 16px;
   line-height: 20px;
-
+  padding: 186px 0 43px 0;
+  text-align: center;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    padding: 0;
+    top: 71px;
+    right: 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 184px;
+    right: 43px;
+  }
 }
