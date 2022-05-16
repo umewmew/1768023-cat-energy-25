@@ -28,6 +28,7 @@
 // стилизация списка товаров
 .other-product__list {
   .list-type-none();
+  margin-bottom: 39px;
 
   @media (min-width: @tablet-width) {
     border: 1px solid @silver-gray;
@@ -48,7 +49,8 @@
   font-style: normal;
   font-weight: 400;
   margin: 0;
-  padding: 25px 44px 36px 0;
+  margin-bottom: 36px;
+  padding: 25px 44px 0 0;
   font-size: 24px;
   line-height: 24px;
   position: relative;
@@ -59,7 +61,7 @@
     height: 1px;
     width: 320px;
     background-color: @silver-gray-light;
-    top: -11px;
+    top: -2px;
     right: -20px;
   }
 
@@ -69,8 +71,8 @@
     height: 2px;
     width: 100vw;
     background-color: @green;
-    top: 41px;
-    left: 246px;
+    top: 39px;
+    left: 249px;
     z-index: -1;
   }
 
@@ -115,7 +117,7 @@
 // стилизация одного пункта товара
 .other-product__item {
   padding-top: 12px;
-  padding-bottom: 19px;
+  margin-bottom: 20px;
   border-top: 1px solid @gray;
 
   @media (min-width: @tablet-width) {
@@ -143,6 +145,8 @@
   line-height: 16px;
   text-transform: uppercase;
 
+  margin: 0;
+
   color: @black-dark-grey;
 
   @media (min-width: @tablet-width) {
@@ -157,6 +161,7 @@
 
 .other-product__button {
   .button-order;
+  padding: 10px 109px;
 
   @media (min-width: @tablet-width) {
     width: 100%;

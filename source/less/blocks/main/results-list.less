@@ -2,30 +2,27 @@
 .results-list {
   display: flex;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 // стилизация результатов(элементов) снижения веса
 .result-list {
-  margin-bottom: 20px;
-  margin-right: 57px;
+  margin: 0;
+  margin-right: 32px;
+  border: 1px solid @silver-gray;
+  border-radius: 5px;
+  padding-top: 14px;
+  padding-left: 6px;
 
   &:last-child {
     margin-right: 0;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 80px;
     margin-right: 42px;
     width: 162px;
-    height: 72px;
+    height: 77px;
     text-align: center;
-    border: 1px solid @silver-gray;
-    border-radius: 5px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 55px;
-    margin-right: 42px;
   }
 }
 
@@ -33,12 +30,15 @@
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 24px;
-  margin-bottom: 8px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;
-    margin-bottom: 11px;
+
+    margin: 0;
+    padding: 15px 30px 11px 25px;
   }
 }
 
@@ -48,8 +48,10 @@
   line-height: 12px;
   color: @dark-grey;
   margin: 0;
+  padding: 0 23px;
 
   @media (min-width: @tablet-width) {
+    padding: 0;
     font-size: 14px;
     line-height: 14px;
   }

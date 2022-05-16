@@ -1,7 +1,15 @@
 .gift {
-  background-color: @green-light;
   height: 289px;
   position: relative;
+  background-image: linear-gradient(@green-light, @green-light), url("../img/catalog-cat-background.jpg");
+  background-repeat: no-repeat;
+  width: 280px;
+  z-index: -2;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(@green-light, @green-light), url("../img/catalog-cat-background@2x.jpg");
+    background-size: 280px 289px;
+  }
 
   &::after {
     content: "";
@@ -14,45 +22,33 @@
     left: 101px;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/catalog-cat-background.jpg");
-    background-repeat: no-repeat;
-    width: 280px;
-    height: 289px;
-    z-index: -2;
-  }
-
-
   @media (min-width: @tablet-width) {
     height: 202px;
+    background-image: linear-gradient(@green-light, @green-light), url("../img/catalog-tablet-cat-background.jpg");
+    background-repeat: no-repeat;
+    width: 707px;
+    z-index: -2;
 
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url("../img/catalog-tablet-cat-background.jpg");
-      background-repeat: no-repeat;
-      width: 707px;
-      height: 202px;
-      z-index: -2;
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(@green-light, @green-light), url("../img/catalog-tablet-cat-background@2x.jpg");
+      background-size: 707px 202px;
     }
   }
 
   @media (min-width: @desktop-width) {
     height: 288px;
     width: 245px;
+    background-image: linear-gradient(@green-light, @green-light), url("../img/catalog-desktop-cat-background.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(@green-light, @green-light), url("../img/catalog-desktop-cat-background@2x.jpg");
+      background-size: 245px 288px;
+    }
 
     &::after {
       background-image: url("../img/catalog-icon-gift.svg");
       top: 55px;
       left: 81px;
-    }
-
-    &::before {
-      background-image: url("../img/catalog-desktop-cat-background.jpg");
-      width: 245px;
-      height: 288px;
     }
   }
 }

@@ -5,21 +5,23 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link href="./css/style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page-body">
     <header class="main-header">
 
       <div class="main-header__logo-wrapper">
-        <a href="index.html">
-          <img class="main-header__logo-picture" src="img/header-img/logo-mobile.svg" width="33" height="37" alt="Логотип сайта Кэт Энерджи.">
-        </a>
-
-        <a href="index.html">
-          <img class="main-header__logo-title" src="img/header-img/logo-title.svg" width="101" height="18" alt="Название сайта Кэт Энерджи.">
+        <a class="main-header__logo-link" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/header-img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/header-img/logo-tablet.svg">
+          <img class="main-header__cat-enegry-logo" src="img/header-img/logo-mobile.svg" width="190" height="37" alt="Логотип Кэт Энерджи">
+        </picture>
         </a>
       </div>
-
-
 
     <nav class="main-header__navigation main-header__navigation--close main-header__navigation--nojs">
       <button class="main-header__navigation-toggle button-services" type="button">
@@ -147,7 +149,7 @@
     <div class="main-footer__links">
 
       <a class="main-footer__links-logo" href="index.html">
-        <img src="img/header-img/logo-title.svg" width="128" height="24" alt="Перейти наверх страницы.">
+        <img src="img/logo-title.svg" width="128" height="24" alt="Перейти наверх страницы.">
       </a>
 
       <div class="main-footer__links-social social-links">
