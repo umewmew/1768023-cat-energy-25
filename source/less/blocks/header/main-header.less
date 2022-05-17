@@ -2,15 +2,14 @@
   display: flex;
   align-items: center;
   width: 280px;
-  justify-content: space-between;
   margin: 0 auto;
   margin-top: 10px;
-  margin-bottom: 18px;
-  box-sizing: border-box;
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
     padding-top: 34px;
+    margin-bottom: 0;
     width: 708px;
   }
 
@@ -56,24 +55,46 @@
   background-repeat: no-repeat;
 }
 
+// стилизация логотипа сайта
 .main-header__logo-wrapper {
   width: 190px;
   height: 38px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-right: 65px;
 
   @media (min-width: @tablet-width) {
     width: 174px;
     height: 52px;
     margin-right: 94px;
-    display: block;
   }
 
   @media (min-width: @desktop-width) {
     width: 202px;
-    height: 60px;
+    height: 59px;
     margin-right: 540px;
+  }
+}
+
+// состояния для логотипа
+.main-header__cat-enegry-logo {
+  min-width: 190px;
+  min-height: 38px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 174px;
+    min-height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 202px;
+    min-height: 59px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -82,7 +103,7 @@
   min-width: 320px;
   position: absolute;
   right: 0;
-  top: 51px;
+  top: 61px;
   z-index: 10;
   background-color: @white;
 

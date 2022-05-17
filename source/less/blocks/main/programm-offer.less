@@ -29,15 +29,51 @@
   }
 }
 
+// стилизация картинок в блоке о похудении
+.programm-offer-weight-loss {
+  background-image: url("../img/cat-weight-loss.svg");
+  background-repeat: no-repeat;
+  background-position: 22px 21px;
+  background-size: 50px 53px;
+
+  @media (min-width: @tablet-width) {
+    background-position: 446px 81px;
+    background-size: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 52px 41px;
+    background-size: 100px 106px;
+  }
+}
+
+// стилизация картинки в блоке о наборе веса
+.programm-offer-weight-gain {
+  background-image: url("../img/cat-weight-gain.svg");
+  background-repeat: no-repeat;
+  background-position: 13px 24px;
+  background-size: 67px 50px;
+
+  @media (min-width: @tablet-width) {
+    background-position: 412px 91px;
+    background-size: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 33px 47px;
+    background-size: 134px 100px;
+  }
+}
+
 .programm-offer__wrapper {
   padding: 30px 33px 18px 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 77px 62px 52px 52px;
+    padding: 77px 62px 56px 52px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 41px 50px 50px 50px;
+    padding: 77px 50px 50px 50px;
   }
 }
 
@@ -57,7 +93,7 @@
   font-family: "Oswald", sans-serif;
   margin: 0;
   margin-bottom: 29px;
-  padding-top: 30px;
+  margin-left: 71px;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
@@ -70,6 +106,13 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 73px;
+    margin-left: 214px;
   }
 }
 
@@ -88,6 +131,13 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin-right: 254px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-bottom: 23px;
   }
 }
 
@@ -109,15 +159,15 @@
     height: 12px;
     background-image: url("../img/arrow-black.svg");
     background-repeat: no-repeat;
-    top: 2px;
-    left: 124px;
+    top: 6px;
+    left: 100px;
   }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
 
-    padding: 4px 46px 8px 0;
+    padding: 4px 48px 4px 0;
 
     &::before {
       top: 12px;

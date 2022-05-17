@@ -5,21 +5,23 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link href="./css/style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page-body">
       <header class="main-header">
 
       <div class="main-header__logo-wrapper">
-        <a href="index.html">
-          <img class="main-header__logo-picture" src="img/header-img/logo-mobile.svg" width="33" height="37" alt="Логотип сайта Кэт Энерджи.">
-        </a>
-
-        <a href="index.html">
-          <img class="main-header__logo-title" src="img/header-img/logo-title.svg" width="101" height="18" alt="Название сайта Кэт Энерджи.">
+        <a class="main-header__logo-link" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/header-img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/header-img/logo-tablet.svg">
+          <img class="main-header__cat-enegry-logo" src="img/header-img/logo-mobile.svg" width="190" height="37" alt="Логотип Кэт Энерджи">
+        </picture>
         </a>
       </div>
-
-
 
     <nav class="main-header__navigation main-header__navigation--close main-header__navigation--nojs">
       <button class="main-header__navigation-toggle button-services" type="button">
@@ -55,7 +57,11 @@
         <!-- для стилизации карточки товара без кнопки -->
         <div class="catalog__type">
           <a class="catalog__image-link" href="product.html">
-            <img src="img/catalog/cat-energy-chiken-small.png" width="140" height="112" alt="Кэт Энерджи с курицей, 500 грамм.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/catalog/chicken-tabdes-small.png 1x, img/catalog/chicken-tabdes-small@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/chicken-tabdes-small.png 1x, img/catalog/chicken-tabdes-small@2x.png 2x">
+              <img class="catalog__image-small" src="img/catalog/mobile/chicken-small-mobile.png" srcset="img/catalog/mobile/chicken-small-mobile@2x.png 2x" width="140" height="112" alt="Кэт Энерджи с курицей, 500 грамм.">
+            </picture>
           </a>
         <!-- для стилизации текстового описания продукта -->
         <div class="catalog__text-wrapper">
@@ -78,7 +84,11 @@
         <div class="catalog__product">
         <div class="catalog__type">
           <a class="catalog__image-link" href="product.html">
-            <img src="img/catalog/cat-energy-chiken-big.png" width="140" height="112" alt="Кэт Энерджи с курицей, 500 грамм.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/catalog/chicken-tabdes-big.png 1x, img/catalog/chicken-tabdes-big@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/chicken-tabdes-big.png 1x, img/catalog/chicken-tabdes-big@2x.png 2x">
+              <img class="catalog__image-big" src="img/catalog/mobile/chicken-big-mobile.png" srcset="img/catalog/mobile/chicken-big-mobile@2x.png 2x" width="140" height="112" alt="Кэт Энерджи с курицей, 1000 грамм.">
+            </picture>
           </a>
 
           <div class="catalog__text-wrapper">
@@ -100,7 +110,11 @@
         <div class="catalog__product">
         <div class="catalog__type">
           <a class="catalog__image-link" href="product.html">
-            <img src="img/catalog/cat-energy-fish-small.png" width="140" height="112" alt="Кэт Энерджи с курицей, 500 грамм.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/catalog/fish-tabdes-small.png 1x, img/catalog/fish-tabdes-small@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/fish-tabdes-small.png 1x, img/catalog/fish-tabdes-small@2x.png 2x">
+              <img class="catalog__image-small" src="img/catalog/mobile/fish-small-mobile.png" srcset="img/catalog/mobile/fish-small-mobile@2x.png 2x" width="140" height="112" alt="Кэт Энерджи с рыбой, 500 грамм.">
+            </picture>
           </a>
 
           <div class="catalog__text-wrapper">
@@ -122,7 +136,11 @@
         <div class="catalog__product">
         <div class="catalog__type">
           <a class="catalog__image-link" href="product.html">
-            <img src="img/catalog/cat-energy-fish-big.png" width="140" height="112" alt="Кэт Энерджи с курицей, 500 грамм.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/catalog/fish-tabdes-big.png 1x, img/catalog/fish-tabdes-big@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/fish-tabdes-big.png 1x, img/catalog/fish-tabdes-big@2x.png 2x">
+              <img class="catalog__image-big" src="img/catalog/mobile/fish-big-mobile.png" srcset="img/catalog/mobile/fish-big-mobile@2x.png 2x" width="140" height="112" alt="Кэт Энерджи с рыбой, 1000 грамм.">
+            </picture>
           </a>
 
           <div class="catalog__text-wrapper">
@@ -145,7 +163,11 @@
         <div class="catalog__product">
         <div class="catalog__type">
           <a class="catalog__image-link" href="product.html">
-            <img src="img/catalog/cat-energy-buckwheat-small.png" width="140" height="112" alt="Кэт Энерджи с курицей, 500 грамм.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/catalog/buckwheat-tabdes-small.png 1x, img/catalog/buckwheat-tabdes-small@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/buckwheat-tabdes-small.png 1x, img/catalog/buckwheat-tabdes-small@2x.png 2x">
+              <img class="catalog__image-small" src="img/catalog/mobile/buckwheat-small-mobile.png" srcset="img/catalog/mobile/buckwheat-small-mobile@2x.png 2x" width="140" height="112" alt="Кэт Энерджи с гречей, 500 грамм.">
+            </picture>
           </a>
 
           <div class="catalog__text-wrapper">
@@ -168,7 +190,11 @@
         <div class="catalog__product">
         <div class="catalog__type">
           <a class="catalog__image-link" href="product.html">
-            <img src="img/catalog/cat-energy-buckwheat-big.png" width="140" height="112" alt="Кэт Энерджи с курицей, 500 грамм.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/catalog/buckwheat-tabdes-big.png 1x, img/catalog/buckwheat-tabdes-big@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/buckwheat-tabdes-big.png 1x, img/catalog/buckwheat-tabdes-big@2x.png 2x">
+              <img class="catalog__image-big" src="img/catalog/mobile/buckwheat-big-mobile.png" srcset="img/catalog/mobile/buckwheat-big-mobile@2x.png 2x" width="140" height="112" alt="Кэт Энерджи с гречей, 1000 грамм.">
+            </picture>
           </a>
 
           <div class="catalog__text-wrapper">
@@ -191,7 +217,11 @@
         <div class="catalog__product">
         <div class="catalog__type">
           <a class="catalog__image-link" href="product.html">
-            <img src="img/catalog/cat-energy-rice-small.png" width="140" height="112" alt="Кэт Энерджи с курицей, 500 грамм.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/catalog/rice-tabdes-small.png 1x, img/catalog/rice-tabdes-small@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/rice-tabdes-small.png 1x, img/catalog/rice-tabdes-small@2x.png 2x">
+              <img class="catalog__image-small" src="img/catalog/mobile/rice-small-mobile.png" srcset="img/catalog/mobile/rice-small-mobile@2x.png 2x" width="140" height="112" alt="Кэт Энерджи с рисом, 500 грамм.">
+            </picture>
           </a>
 
           <div class="catalog__text-wrapper">
@@ -216,7 +246,7 @@
           <span class="catalog__show-more-title">Показать ещё 100500 товаров</span>
           <span class="catalog__show-more-subtitle">На самом деле вкусов гораздо больше!</span>
 
-          <a class="catalog__show-more-link button-order" href="new-product.html">Показать все</a>
+          <a class="catalog__show-more-link button-order" href="new-product.html"><span>Показать все</span></a>
           </div>
 
         </div>
@@ -290,7 +320,7 @@
     <div class="main-footer__links">
 
       <a class="main-footer__links-logo" href="index.html">
-        <img src="img/header-img/logo-title.svg" width="128" height="24" alt="Перейти наверх страницы.">
+        <img src="img/logo-title.svg" width="128" height="24" alt="Перейти наверх страницы.">
       </a>
 
       <div class="main-footer__links-social social-links">

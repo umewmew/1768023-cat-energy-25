@@ -9,7 +9,7 @@
   display: flex;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 70px;
+    padding: 61px 70px;
     justify-content: space-between;
   }
 
@@ -20,6 +20,14 @@
     z-index: 2;
     top: 93px;
     left: 110px;
+  }
+}
+
+// отдельная стилизация для слова в футере "Санкт-Петербург"
+.adress-footer__adress-index {
+  @media (min-width: @tablet-width) {
+    margin-top: 18px;
+    display: block;
   }
 }
 
@@ -41,6 +49,7 @@
   text-transform: uppercase;
   color: @black-light;
   text-align: left;
+  width: 139px;
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -61,7 +70,8 @@
   font-size: 14px;
   line-height: 20px;
   color: @dark-grey;
-  text-align: end;
+  text-align: left;
+  width: 139px;
 
   @media (min-width: @tablet-width) {
     width: 160px;

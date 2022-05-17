@@ -17,12 +17,12 @@
   }
 }
 
+// стилизация заголовка блока "Как это работает"
 .instruction__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   margin: 0;
-  text-align: center;
 
   font-size: 36px;
   line-height: 40px;
@@ -40,9 +40,9 @@
   }
 }
 
+// позиционарование списка инструкции
 .instruction__description-list {
   .list-type-none();
-  padding: 0 20px;
   display: flex;
   flex-direction: column;
 
@@ -60,7 +60,16 @@
   }
 }
 
+// стилизация одного пункта списка
 .instruction__description-item {
+  position: relative;
+  height: 60px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+    height: auto;
+  }
+
   @media (min-width: @desktop-width) {
     width: 250px;
   }
@@ -74,8 +83,104 @@
   }
 }
 
+// стилизация картинок в пунктах
+.instruction__description-item-one {
+  background-image: url("../img/instruction-list/item-one.jpg");
+  background-repeat: no-repeat;
+  background-size: 61px 60px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/instruction-list/item-one-big.jpg");
+    background-size: 80px 80px;
+    background-position: 0 40px;
+
+    &::before {
+      content: "1";
+      font-size: 280px;
+      width: 112px;
+      font-family: "Oswald", sans-serif;
+      color: @basic-grey;
+      bottom: -68px;
+      left: 118px;
+      z-index: -1;
+      position: absolute;
+    }
+  }
+}
+
+.instruction__description-item-two {
+  background-image: url("../img/instruction-list/item-two.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/instruction-list/item-two-big.jpg");
+    background-size: 80px 80px;
+    background-position: 0 40px;
+
+    &::before {
+      content: "2";
+      font-size: 280px;
+      width: 112px;
+      font-family: "Oswald", sans-serif;
+      color: @basic-grey;
+      bottom: -68px;
+      left: 118px;
+      z-index: -1;
+      position: absolute;
+    }
+  }
+}
+
+.instruction__description-item-three {
+  background-image: url("../img/instruction-list/item-three.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/instruction-list/item-three-big.jpg");
+    background-size: 80px 80px;
+    background-position: 0 40px;
+
+    &::before {
+      content: "3";
+      font-size: 280px;
+      width: 112px;
+      font-family: "Oswald", sans-serif;
+      color: @basic-grey;
+      bottom: -68px;
+      left: 118px;
+      z-index: -1;
+      position: absolute;
+    }
+  }
+}
+
+.instruction__description-item-four {
+  background-image: url("../img/instruction-list/item-four.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/instruction-list/item-four-big.jpg");
+    background-size: 80px 80px;
+    background-position: 0 40px;
+
+    &::before {
+      content: "4";
+      font-size: 280px;
+      width: 112px;
+      font-family: "Oswald", sans-serif;
+      color: @basic-grey;
+      bottom: -68px;
+      left: 118px;
+      z-index: -1;
+      position: absolute;
+    }
+  }
+}
+
+// стилизация текста пункта
 .instruction__description {
   margin: 0;
+  margin-left: 80px;
   padding: 0;
 
   font-family: "Arial", sans-serif;
@@ -88,5 +193,7 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    padding: 111px 14px 57px 0;
+    margin-left: 0;
   }
 }
