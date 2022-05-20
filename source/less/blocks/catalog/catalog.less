@@ -5,15 +5,22 @@
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 324px);
+    column-gap: 60px;
+    row-gap: 144px;
     padding: 0 30px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin-bottom: 68px;
   }
 
   @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 139px;
     padding: 0 110px;
     justify-content: unset;
+    margin-bottom: 72px;
   }
 }
 
@@ -34,10 +41,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 36px 66px 36px;
     border: none;
     background-color: @basic-grey;
-    margin-bottom: 133px;
+    margin: 0;
+    padding: 0;
 
     display: flex;
     flex-direction: column;
@@ -45,16 +52,6 @@
 
     &::before {
       display: none;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 30px 113px 35px;
-    margin-bottom: 143px;
-    margin-right: 80px;
-
-    &:nth-child(4n) {
-      margin-right: 0;
     }
   }
 }
@@ -67,15 +64,29 @@
   @media (min-width: @tablet-width) {
     flex-direction: column;
     align-items: center;
-    margin-top: -73px;
-    margin-bottom: 33px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: -80px;
+    margin: 0;
   }
 }
 
+.catalog__type-small {
+  @media (min-width: @tablet-width) {
+    margin: -47px 36px 33px 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: -51px 30px 34px 35px;
+  }
+}
+
+.catalog__type-big {
+  @media (min-width: @tablet-width) {
+    margin: -74px 36px 33px 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: -78px 30px 34px 35px;
+  }
+}
 // стилизация названия товара в карточке
 .catalog__title-link {
   font-family: "Oswald", sans-serif;
@@ -92,18 +103,18 @@
     text-align: center;
     font-size: 20px;
     line-height: 24px;
-    margin-left: 41px;
+    margin-left: 48px;
   }
 
   @media (min-width: @desktop-width) {
     width: 145px;
-    margin-left: 20px;
+    margin-left: 12px;
     line-height: 21px;
   }
 }
 
 // стилизация картинки с товаром
-.catalog__image-link {
+.catalog__image-link-small {
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
@@ -111,18 +122,41 @@
   }
 }
 
-// стилизация картинки товара
-.catalog__image-small {
+.catalog__image-link-big {
+  text-decoration: none;
+
   @media (min-width: @tablet-width) {
-    width: 161px;
-    height: 171px;
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 41px;
   }
 }
 
+// стилизация картинки товара 500гр
+.catalog__image-small {
+  @media (min-width: @tablet-width) {
+    width: 161px;
+    height: 172px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 163px;
+    height: 174px;
+  }
+}
+
+// стилизация картинки товара 1000гр
 .catalog__image-big {
   @media (min-width: @tablet-width) {
     width: 168px;
-    height: 200px;
+    height: 206px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 172px;
+    height: 196px;
   }
 }
 
@@ -134,11 +168,15 @@
   padding: 10px 109px;
 
   @media (min-width: @tablet-width) {
+    padding: 10px 93px;
+    margin-bottom: 33px;
     width: 248px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 10px 53px;
     width: 168px;
+    margin-bottom: 38px;
   }
 }
 
@@ -199,12 +237,12 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding: 163px 37px 38px 37px;
+    padding: 163px 37px 36px 37px;
     border: 2px solid @basic-grey;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 158px 39px 41px;
+    padding: 160px 39px 41px;
   }
 }
 
@@ -239,11 +277,7 @@
     line-height: 18px;
     text-align: center;
     width: 167px;
-    margin-bottom: 49px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 77px;
+    margin-bottom: 85px;
   }
 }
 
@@ -256,10 +290,6 @@
   color: @dark-grey;
   background-color: @basic-grey;
   padding: 10px 94px;
-
-  @media (min-width: @tablet-width) {
-    width: 248px;
-  }
 
   @media (min-width: @desktop-width) {
     width: 168px;

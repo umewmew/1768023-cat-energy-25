@@ -11,11 +11,21 @@
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 27px;
     font-size: 16px;
     line-height: 20px;
     justify-content: unset;
   }
 
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    width: 288px;
+    justify-content: space-between;
+  }
+}
+
+.properties-other-product__price {
   @media (min-width: @desktop-width) {
     margin: 0;
   }

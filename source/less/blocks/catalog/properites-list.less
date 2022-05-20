@@ -14,29 +14,51 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     grid-template-columns: repeat(2, 124px);
-    margin-top: 21px;
+    margin-top: 16px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(2, 84px);
+    margin-top: 25px;
   }
 }
 
-.properties-list__name {
+.properties-list__name-weight {
   @media (min-width: @tablet-width) {
-    padding-top: 7px;
-    padding-bottom: 8px;
+    padding-bottom: 9px;
+    margin: 0;
     border-bottom: 1px solid @silver-gray;
   }
 }
 
-.properties-list__value {
+.properties-list__value-weight {
   margin: 0;
   text-align: right;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 9px;
+    border-bottom: 1px solid @silver-gray;
+  }
+}
+
+.properties-list__name-price,
+.properties-list__name-taste {
+  @media (min-width: @tablet-width) {
     padding-top: 7px;
-    padding-bottom: 8px;
+    padding-bottom: 9px;
+    margin: 0;
+    border-bottom: 1px solid @silver-gray;
+  }
+}
+
+.properties-list__value-price,
+.properties-list__value-taste {
+  margin: 0;
+  text-align: right;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 5px;
+    padding-bottom: 9px;
     border-bottom: 1px solid @silver-gray;
   }
 }
