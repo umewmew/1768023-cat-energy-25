@@ -54,11 +54,11 @@
         <div class="program-form__cat-data">
         <div class="program-form__info information-cat">
           <label class="information-cat__label"> Имя*:
-            <input class="information-cat__field" type="text" name="name" required autocomplete="off" placeholder="БАРСИК">
+            <input class="information-cat__field" type="text" name="name" required autocomplete="off" value="БАРСИК" placeholder="БАРСИК">
           </label>
 
           <label class="information-cat__label"> Вес (кг)*:
-            <input class="information-cat__field" type="text" name="weight" required autocomplete="off" placeholder="7">
+            <input class="information-cat__field" type="text" name="weight" required autocomplete="off" value="7" placeholder="7">
           </label>
 
           <label class="information-cat__label"> Возраст (лет):
@@ -68,65 +68,76 @@
 
         <div class="program-form__offer offer-select">
         <label class="offer-select__label" for="weight-loss">
-          <input class="offer-select__field visually-hidden" type="radio" name="offer-select" value="Похудение" id="weight-loss" checked>
-          <span class="offer-select__control-mark"></span>Похудение
+          <input class="offer-select__field visually-hidden" checked type="radio" name="offer-select" value="Похудение" id="weight-loss">
+          <span class="offer-select__control-mark"></span>
+          <span class="offer-select__value">Похудение</span>
         </label>
 
         <label class="offer-select__label" for="weight-gain">
           <input class="offer-select__field visually-hidden"  type="radio" name="offer-select" id="weight-gain" value="Набор массы">
-          <span class="offer-select__control-mark"></span>Набор массы
+          <span class="offer-select__control-mark"></span>
+          <span class="offer-select__value">Набор массы</span>
         </label>
 
         <label class="offer-select__label" for="connect-user">
-          <input class="offer-select__field visually-hidden" type="radio" name="offer-select" id="connect-user" value="Не знаю (Нужен ваш совет)">
-          <span class="offer-select__control-mark"></span>Не знаю (Нужен ваш совет)
+          <input class="offer-select__field visually-hidden" disabled type="radio" name="offer-select" id="connect-user" value="Не знаю (Нужен ваш совет)">
+          <span class="offer-select__control-mark"></span>
+          <span class="offer-select__value">Не знаю (Нужен ваш совет)</span>
         </label>
         </div>
         </div>
 
 
         <div class="program-form__info-owner information-owner">
-        <legend class="information-owner__title">Контактные данные (владельца кота)</legend>
+        <h3 class="information-owner__title">Контактные данные (владельца кота)</h3>
 
         <div class="information-owner__wrapper">
         <label class="information-owner__label">E-mail:*
-          <input class="information-owner__email-field" type="email" name="email" required placeholder="kuklachev@gmail.com">
+          <input class="information-owner__email-field" type="email" name="email" required placeholder="kuklachev@gmail.com" value="kuklachev@gmail.com">
         </label>
 
         <label class="information-owner__label">Телефон:*
-          <input class="information-owner__tel-field" type="tel" name="tel" required placeholder="8 (960) 900-60-90">
+          <input class="information-owner__tel-field" type="tel" name="tel" required placeholder="8 (960) 900-60-90" value="8 (960) 900-60-90">
         </label>
         </div>
         </div>
 
         <div class="program-form__comment comment-text">
-          <legend class="comment-text__title">Комментарий</legend>
-          <textarea class="comment-text__text"name="comment text" rows="6" cols="25" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <h3 class="comment-text__title">Комментарий</h3>
+          <textarea class="comment-text__text" name="comment text" rows="6" cols="25" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
 
         <div class="program-form__other-product other-product-list">
-          <legend class="other-product-list__title">Дополнительно</legend>
+          <h3 class="other-product-list__title">Дополнительно</h3>
 
         <div class="other-product-list__wrapper">
         <label class="other-product-list__label" for="sweetener">
-          <input class="other-product-list__field visually-hidden" type="checkbox" name="other-product" id="sweetener" value="Сахарозаменитель" checked>
-          <span class="other-product-list__field-mark"></span>Сахарозаменитель</label>
+          <input class="other-product-list__field visually-hidden" disabled type="checkbox" name="other-product" id="sweetener" value="Сахарозаменитель" >
+          <span class="other-product-list__field-mark"></span>
+          <span class="other-product-list__value">Сахарозаменитель</span>
+        </label>
 
         <label class="other-product-list__label" for="water">
-          <input class="other-product-list__field visually-hidden" type="checkbox" name="other-product" id="water" value="Питьевая вода">
-          <span class="other-product-list__field-mark"></span>Питьевая вода</label>
+          <input class="other-product-list__field visually-hidden" checked type="checkbox" name="other-product" id="water" value="Питьевая вода" >
+          <span class="other-product-list__field-mark"></span>
+          <span class="other-product-list__value">Питьевая вода</span>
+        </label>
 
         <label class="other-product-list__label" for="milk">
           <input class="other-product-list__field visually-hidden" type="checkbox" name="other-product" id="milk" value="Молоко">
-          <span class="other-product-list__field-mark"></span>Молоко</label>
+          <span class="other-product-list__field-mark"></span>
+          <span class="other-product-list__value">Молоко</span>
+        </label>
 
         <label class="other-product-list__label" for="vitamins">
           <input class="other-product-list__field visually-hidden" type="checkbox" name="other-product" id="vitamins" value="Витамины">
-          <span class="other-product-list__field-mark"></span>Витамины</label>
+          <span class="other-product-list__field-mark"></span>
+          <span class="other-product-list__value">Витамины</span>
+        </label>
         </div>
 
         <div class="program-form__text-contain">
-          <button class="program-form__button button-order" type="submit">Отправить заявку</button>
+          <button class="program-form__button button-order" type="submit"><span>Отправить заявку</span></button>
         <span class="program__postscript">* — Обязательные поля</span>
         </div>
 
@@ -134,11 +145,13 @@
       </form>
       </main>
 
-      <footer class="main-footer">
-      <div class="adress-footer adress-footer__catalog">
+      <footer class="main-footer main-footer_gray-background">
+        <div class="adress-footer ">
           <p class="adress-footer__text">приглашаем к сотрудничеству  дилеров!</p>
-          <address class="adress-footer__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-      </div>
+          <address class="adress-footer__adress">ул. Большая Конюшенная, д. 19/8
+            <span class="adress-footer__adress-index">Санкт-Петербург</span>
+          </address>
+        </div>
 
     <div class="adress-footer__map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610228!2d30.32085871744385!3d59.93871650000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1651736018473!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"

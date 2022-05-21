@@ -1,6 +1,11 @@
+// .main-container {
+//   overflow: hidden;
+// }
+
 .promo {
   @media (min-width: @desktop-width) {
-    margin-bottom: 82px;
+    margin-bottom: 135px;
+    position: relative;
   }
 }
 
@@ -25,18 +30,19 @@
 
   @media (min-width: @desktop-width) {
     width: 100vw;
-    height: 696px;
+    height: 695px;
     display: block;
-    left: 720px;
-    top: -141px;
+    left: 611px;
+    top: -116px;
     position: absolute;
-    background-image: linear-gradient(@green-light, @green-light), url("../img/promo-cat-desktop.jpg");
+    background-image: linear-gradient(@green-light, @green-light), url("../img/promo-cat-desktop-2.jpg");
     background-repeat: no-repeat;
-    background-size: auto auto;
+    background-size: 1044px 695px;
+    background-position-x: -14px;
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(@green-light, @green-light), url("../img/promo-cat-desktop@2x.jpg");
+      background-image: linear-gradient(@green-light, @green-light), url("../img/promo-cat-desktop-2@2x.jpg");
       background-size: 720px auto;
     }
   }
@@ -59,6 +65,7 @@
   @media (min-width: @desktop-width) {
     width: 1220px;
     flex-direction: row;
+    position: none;
   }
 }
 
@@ -85,7 +92,7 @@
     line-height: 60px;
     color: @black;
 
-    padding-top: 62px;
+    padding-top: 64px;
     padding-left: 87px;
     margin-bottom: 42px;
 
@@ -96,6 +103,7 @@
     margin-bottom: 40px;
     padding: 0;
     padding-top: 111px;
+    padding-left: 80px;
   }
 }
 
@@ -124,6 +132,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 52px;
+    padding-left: 80px;
   }
 }
 
@@ -150,6 +159,8 @@
   @media (min-width: @desktop-width) {
     min-width: 552px;
     min-height: 499px;
+    margin-left: -43px;
+    margin-top: 30px;
   }
 }
 
@@ -164,14 +175,15 @@
     line-height: 20px;
     height: 54px;
     width: 244px;
-    top: 26px;
-    left: 89px;
+    top: 30px;
+    left: 90px;
     padding: 15px 26px;
     position: absolute;
     z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
-    left: 124px;
+    top: 340px;
+    left: -416px;
   }
 }

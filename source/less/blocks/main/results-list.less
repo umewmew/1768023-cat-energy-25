@@ -3,6 +3,10 @@
   display: flex;
   text-align: center;
   margin-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 41px;
+  }
 }
 
 // стилизация результатов(элементов) снижения веса
@@ -19,6 +23,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding: 0;
     margin-right: 42px;
     width: 162px;
     height: 77px;

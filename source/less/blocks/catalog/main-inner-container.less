@@ -1,5 +1,6 @@
 .main-inner-container {
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .main-inner-container__title {
@@ -17,11 +18,14 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    padding: 64px 0 163px 30px;
+    padding: 0;
+    padding-top: 64px;
+    padding-left: 30px;
+    margin-bottom: 164px;
     border: none;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 74px 0 165px 110px;
+    padding: 74px 0 0 110px;
   }
 }

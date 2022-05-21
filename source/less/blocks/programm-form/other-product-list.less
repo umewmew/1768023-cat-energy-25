@@ -1,9 +1,10 @@
 // стилизация заголовка блока "Дополнительно"
 .other-product-list__title {
+  font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
-  margin-bottom: 35px;
+  margin-bottom: 39px;
   position: relative;
 
   &::before {
@@ -28,19 +29,21 @@
       height: 2px;
       width: 30px;
       background-color: @green;
-      top: 23px;
+      top: 21px;
       left: -70px;
       z-index: -1;
     }
 
     &::before {
       background-color: @green;
-      top: 23px;
-      left: 289px;
+      top: 21px;
+      left: 252px;
     }
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 63px;
+
     &::after {
       width: 70px;
       top: 23px;
@@ -63,7 +66,8 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 282px 242px;
-    gap: 32px 61px;
+    gap: 46px 61px;
+    margin-bottom: 59px;
   }
 
   @media (min-width: @desktop-width) {
@@ -71,19 +75,21 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 63px;
   }
 }
 
 .other-product-list__label {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding-left: 44px;
   position: relative;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 0;
-    padding-left: 66px;
+    padding-left: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -96,11 +102,12 @@
 // стилизация маркеров чекбокса
 .other-product-list__field-mark {
   position: absolute;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   outline: 1px solid @silver-gray;
   left: 0;
   top: -4px;
+
 
   @media (min-width: @tablet-width) {
     width: 40px;
@@ -108,6 +115,7 @@
   }
 }
 
+// стилизация галочки выбора
 .other-product-list__field[type="checkbox"]:checked + .other-product-list__field-mark::before {
   content: "";
   position: absolute;
@@ -115,8 +123,8 @@
   height: 14px;
   background-image: url("../../../img/form-check-icon.svg");
   background-repeat: no-repeat;
-  top: 6px;
-  left: 4px;
+  top: 8px;
+  left: 6px;
 
   @media (min-width: @tablet-width) {
     background-image: url("../../../img/form-tablet-check-icon.svg");
@@ -125,4 +133,16 @@
     top: 7px;
     left: 7px;
   }
+}
+
+// стилизация состояний чекбокса
+
+.other-product-list__field:hover ~ .other-product-list__field-mark {
+  outline: 1px solid @aprox-gray;
+}
+
+.other-product-list__field:disabled ~ .other-product-list__value,
+.other-product-list__field:disabled + .other-product-list__field-mark {
+  cursor: default;
+  opacity: 0.3;
 }

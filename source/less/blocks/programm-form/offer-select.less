@@ -1,8 +1,7 @@
 .offer-select {
   display: flex;
   flex-direction: column;
-  padding-top: 25px;
-  padding-bottom: 17px;
+  padding-top: 15px;
   position: relative;
   box-sizing: border-box;
 
@@ -30,11 +29,13 @@
 .offer-select__label {
   color: @black-dark-grey;
   padding-left: 45px;
-  margin-bottom: 19px;
+  margin-bottom: 25px;
   position: relative;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     padding-left: 59px;
+    margin-bottom: 26px;
   }
 }
 
@@ -51,8 +52,19 @@
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-    top: -10px;
+    top: -3px;
+    left: -3px;
   }
+}
+
+.offer-select__field:hover + .offer-select__control-mark {
+  border: 1px solid @aprox-gray;
+}
+
+.offer-select__field:disabled + .offer-select__control-mark,
+.offer-select__field:disabled ~ .offer-select__value {
+  cursor: default;
+  opacity: 0.3;
 }
 
 // стилизация выбранного пункта

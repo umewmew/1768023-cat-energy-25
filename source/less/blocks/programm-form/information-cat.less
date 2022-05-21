@@ -1,6 +1,6 @@
 // стилизация блока данных о коте
 .information-cat {
-  padding-bottom: 24px;
+  padding-bottom: 22px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -19,35 +19,58 @@
     &::before {
       display: none;
     }
-    margin-bottom: 47px;
+    margin-bottom: 56px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
 .information-cat label {
   color: @dark-grey;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 17px;
   display: flex;
   align-items: center;
 
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
 .information-cat input {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: @dark-grey;
   min-height: 40px;
   padding-left: 13px;
-  margin-left: 5px;
+  margin-left: 10px;
   flex-grow: 1;
   border: none;
   outline: 1px solid @outline-gray;
 
+  &:hover {
+    outline: 1px solid @dark-grey;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @dark-grey;
+  }
+
+  &:invalid {
+    outline: 2px solid @error-color;
+  }
+
   @media (min-width: @tablet-width) {
-    padding-left: 18px;
     font-size: 20px;
     line-height: 30px;
+    padding-left: 19px;
+    margin-left: 17px;
   }
 
   @media (min-width: @desktop-width) {
