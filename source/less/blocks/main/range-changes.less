@@ -1,3 +1,62 @@
+.range-changes__range-bar {
+  width: 85px;
+  height: 14px;
+  background-color: @white;
+  border: 1px solid @silver-gray;
+  border-radius: 6px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 426px;
+    height: 6px;
+    background-color: @silver-gray;
+  }
+}
+
+.range-changes__dot {
+  width: 36px;
+  height: 6px;
+  background-color: @green;
+  border-radius: 6px;
+  position: absolute;
+  left: 6px;
+  top: 4px;
+
+  @media (min-width: @tablet-width) {
+    height: 34px;
+    width: 34px;
+    background-color: @white;
+    border: 1px solid @special-light-gray;
+    border-radius: 50%;
+    left: 196px;
+    top: -16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: @green;
+      border-radius: 6px;
+      top: 13px;
+      left: 13px;
+    }
+  }
+}
+
+// стилизация состояний ползунка
+.range-changes__dot:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+}
+
+.range-changes__dot:active {
+  border: 1px solid @green;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+}
+
+
 .range-button {
   font-family: "Oswald", sans-serif;
   font-style: normal;
