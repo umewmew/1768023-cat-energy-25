@@ -82,6 +82,7 @@
   margin-bottom: 25px;
   padding-left: 44px;
   position: relative;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -106,12 +107,14 @@
   left: 0;
   top: -4px;
 
+
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
   }
 }
 
+// стилизация галочки выбора
 .other-product-list__field[type="checkbox"]:checked + .other-product-list__field-mark::before {
   content: "";
   position: absolute;
@@ -129,4 +132,16 @@
     top: 7px;
     left: 7px;
   }
+}
+
+// стилизация состояний чекбокса
+
+.other-product-list__field:hover ~ .other-product-list__field-mark {
+  outline: 1px solid @aprox-gray;
+}
+
+.other-product-list__field:disabled ~ .other-product-list__value,
+.other-product-list__field:disabled + .other-product-list__field-mark {
+  cursor: default;
+  opacity: 0.3;
 }

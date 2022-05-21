@@ -11,12 +11,18 @@
   padding: 0;
   border: none;
   background-color: inherit;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin-left: 17px;
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dashed @silver-gray;
+
+
+    &:hover {
+      border-bottom: 1px solid @dark-grey;
+    }
   }
 }
 

@@ -105,6 +105,20 @@
   background-repeat: no-repeat;
   background-position: 190px center;
 
+  &:hover {
+    outline: 1px solid @dark-grey;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @dark-grey;
+    background-image: url("../img/form-email-icon-check.svg");
+  }
+
+  &:invalid {
+    outline: 2px solid @error-color;
+    background-image: url("../img/form-email-icon-error.svg");
+  }
+
   @media (min-width: @tablet-width) {
     background-position: 514px center;
   }
@@ -115,6 +129,20 @@
   background-image: url("../img/form-phone-icon.svg");
   background-repeat: no-repeat;
   background-position: 171px center;
+
+  &:hover {
+    outline: 1px solid @dark-grey;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @dark-grey;
+    background-image: url("../img/form-phone-icon-check.svg");
+  }
+
+  &:invalid {
+    outline: 2px solid @error-color;
+    background-image: url("../img/form-phone-icon-error.svg");
+  }
 
   @media (min-width: @tablet-width) {
     background-position: 498px center;
@@ -134,3 +162,4 @@
     line-height: 30px;
   }
 }
+
