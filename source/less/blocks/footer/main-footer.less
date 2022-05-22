@@ -2,6 +2,17 @@
   background-color: @basic-grey;
 }
 
+.main-footer__container {
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+}
+
 .main-footer__links {
   padding-top: 39px;
   padding-left: 20px;
@@ -13,6 +24,8 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
+    width: 708px;
+    margin: 0 auto;
     padding: 58px 30px 55px 30px;
     flex-direction: row;
     justify-content: space-between;
