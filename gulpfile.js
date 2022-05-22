@@ -49,7 +49,7 @@ const html = () => {
   .pipe(gulp.dest('build/img'))
 }
 
- const copyImages = () => {
+  const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(gulp.dest('build/img'))
 }
@@ -65,7 +65,7 @@ const html = () => {
 
 //SVG
 
- const svg = () => {
+  const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/footer-social/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
