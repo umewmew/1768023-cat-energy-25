@@ -1,5 +1,19 @@
 .program {
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.program-form {
+  @media (min-width: @desktop-width) {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+}
+
+.program__subtext {
+  @media (min-width: @desktop-width) {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
 }
 
 // стилизация заголовка "Подбор программы"
@@ -19,7 +33,7 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-top: 65px;
+    margin-top: 49px;
     margin-bottom: 53px;
     padding: 0;
     padding-left: 70px;
@@ -28,8 +42,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 110px;
-    margin-top: 74px;
+    padding-left: 0;
+    margin-top: 58px;
     margin-bottom: 56px;
   }
 }
@@ -55,7 +69,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 110px;
+    padding-left: 0;
+    margin-bottom: 68px;
   }
 }
 
@@ -75,5 +90,6 @@
 
   @media (min-width: @desktop-width) {
     font-size: 16px;
+    margin-bottom: 21px;
   }
 }

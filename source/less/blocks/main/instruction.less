@@ -11,7 +11,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    width: unset;
+    max-width: 1220px;
     margin-bottom: 69px;
     padding: 0 110px;
   }
@@ -49,9 +50,9 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 245px 245px;
+    grid-template-columns: 245px 259px;
     column-gap: 136px;
-    row-gap: 38px;
+    row-gap: 36px;
   }
 
   @media (min-width: @desktop-width) {
@@ -197,5 +198,10 @@
     line-height: 24px;
     padding: 111px 14px 57px 0;
     margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    padding: 113px 14px 57px 3px;
   }
 }

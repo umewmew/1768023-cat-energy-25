@@ -16,12 +16,16 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-left: 33px;
+    margin-left: 25px;
     padding: 0;
 
     &::before {
       display: none;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 35px;
   }
 }
 
@@ -34,15 +38,18 @@
 }
 
 // стилизация состояний кнопок на соц.сети
-.social-links__svg {
+.social-links__svg,
+.academy-link__svg {
   fill: @special-gray;
 }
 
-.social-links__button:hover .social-links__svg {
+.social-links__button:hover .social-links__svg,
+.academy-link__logo:hover .academy-link__svg {
   fill: @green;
 }
 
-.social-links__button:active .social-links__svg {
+.social-links__button:active .social-links__svg,
+.academy-link__logo:active .academy-link__svg {
   fill: @green;
   opacity: 0.3;
 }
