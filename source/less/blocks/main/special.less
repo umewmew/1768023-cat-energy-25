@@ -14,7 +14,7 @@
 .special__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 25px 20px 43px 20px;
+  padding: 25px 20px 45px 20px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -109,7 +109,7 @@
   width: 280px;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
+    width: 702px;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 54px;
@@ -119,6 +119,18 @@
     width: 436px;
     padding-top: 82px;
     margin-bottom: 69px;
+  }
+}
+
+// стилизация пункта о затратах на питание
+.special__result-price {
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin-top: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
   }
 }
 
@@ -136,6 +148,7 @@
 
   @media (min-width: @desktop-width) {
     top: -55px;
+    left: 11px;
   }
 }
 
@@ -147,15 +160,15 @@
 
 // картинки слайдера
 .special__image-wrapper {
-  margin-bottom: 11px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 }
 

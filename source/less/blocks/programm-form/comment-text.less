@@ -4,7 +4,7 @@
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
-  margin-bottom: 35px;
+  margin-bottom: 39px;
   position: relative;
 
   &::before {
@@ -27,10 +27,11 @@
       content: "";
       position: absolute;
       height: 2px;
-      width: 30px;
       background-color: @green;
       top: 23px;
-      left: -70px;
+      width: 100vw;
+      left: auto;
+      right: calc(100% + 40px);
       z-index: -1;
     }
 
@@ -42,9 +43,10 @@
 
   @media (min-width: @desktop-width) {
     &::after {
-      width: 70px;
       top: 23px;
-      left: -110px;
+      width: 100vw;
+      left: auto;
+      right: calc(100% + 40px);
     }
 
     &::before {
@@ -57,7 +59,7 @@
 //  стилизация формы для отправки комментария
 .comment-text__text {
   width: 100%;
-  min-height: 150px;
+  min-height: 148px;
   font-family: "Oswald", sans-serif;
   line-height: 18px;
   font-size: 16px;

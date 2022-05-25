@@ -9,6 +9,8 @@
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page-body">
 
@@ -31,14 +33,14 @@
 
         <div class="main-header__navigation-wrapper">
           <ul class="main-header__navigation-list menu-services-list">
-            <li class="menu-services__item">
-              <a class="menu-services__link--index menu-services__link active-link--index">Главная</a>
+            <li class="menu-services-list__item">
+              <a class="menu-services-list__item-index menu-services-list__link menu-services-list__link-index">Главная</a>
             </li>
-            <li class="menu-services__item">
-              <a class="menu-services__link--index menu-services__link" href="catalog.html">Каталог продукции</a>
+            <li class="menu-services-list__item">
+              <a class="menu-services-list__item-index menu-services-list__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="menu-services__item">
-              <a class="menu-services__link--index menu-services__link" href="program-form.html">Подбор программы</a>
+            <li class="menu-services-list__item">
+              <a class="menu-services-list__item-index menu-services-list__link" href="program-form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -48,14 +50,14 @@
 
     <main class="main-container">
       <section class="promo">
+        <div class="promo__background"></div>
+
         <h2 class="visually-hidden">Подбор программы для похудения кота</h2>
         <div class="promo__container">
           <div class="promo__text-block">
           <h1 class="promo__title">Функциональное <br> питание для котов</h1>
           <p class="promo__subtitle">Занялся собой? Займись котом!</p>
           </div>
-
-          <div class="promo__background"></div>
 
           <div class="promo__delivery-block">
           <picture>
@@ -73,7 +75,7 @@
       <section class="programm-offer page-container">
         <h2 class="visually-hidden">Программы нормализации веса</h2>
 
-        <div class="programm-offer__weight-change programm-offer-weight-loss">
+        <div class="programm-offer__weight-change programm-offer__weight-change--weight-loss">
           <div class="programm-offer__wrapper">
           <h3 class="programm-offer__title">Похудение</h3>
 
@@ -85,9 +87,9 @@
           </div>
         </div>
 
-        <div class="programm-offer__weight-change programm-offer-weight-gain">
+        <div class="programm-offer__weight-change programm-offer__weight-change--weight-gain">
           <div class="programm-offer__wrapper">
-          <h3 class="programm-offer__title weight-gain">Набор массы</h3>
+          <h3 class="programm-offer__title">Набор массы</h3>
 
           <p class="programm-offer__description">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -118,7 +120,7 @@
           </li>
 
           <li class="instruction__description-item instruction__description-item-four">
-            <p class="instruction__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+            <p class="instruction__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
             </p>
           </li>
         </ul>
@@ -135,19 +137,19 @@
 
         <div class="special__results-block">
         <div class="special__results results-list">
-          <dl class="result-list">
-            <dt class="results-list__results">5 кг</dt>
-            <dd class="results-list__results-description">снижения веса</dd>
+          <dl class="results-list__item">
+            <dt class="results-list__item-results">5 кг</dt>
+            <dd class="results-list__item-results-description">снижения веса</dd>
           </dl>
 
-          <dl class="result-list">
-            <dt class="results-list__results">60 дней</dt>
-            <dd class="results-list__results-description">затрачено времени</dd>
+          <dl class="results-list__item">
+            <dt class="results-list__item-results">60 дней</dt>
+            <dd class="results-list__item-results-description">затрачено времени</dd>
           </dl>
           </div>
 
           <p class="special-subtitle">Затраты на питание:
-            <span class="special-subtitle_price">15 000 РУБ. </span>
+            <span class="special__result-price">15 000 РУБ. </span>
           </p>
         </div>
         </div>
@@ -177,7 +179,7 @@
           <div class="special__range-wrapper range-changes">
             <button class="range-changes__before range-button" type="button">Было</button>
 
-            <div class="range-changes__range-bar" type="range"><span class="range-changes__dot"></span></div>
+            <div class="range-changes__range-bar"><span class="range-changes__dot"></span></div>
 
             <button class="range-changes__after range-button" type="button">Стало</button>
           </div>
@@ -189,17 +191,17 @@
     <footer class="main-footer">
       <div class="main-footer__container">
       <div class="adress-footer ">
-          <p class="adress-footer__text">приглашаем к сотрудничеству  дилеров!</p>
+          <p class="adress-footer__text">приглашаем к&nbsp;сотрудничеству  дилеров!</p>
           <address class="adress-footer__adress">ул. Большая Конюшенная, д. 19/8
             <span class="adress-footer__adress-index">Санкт-Петербург</span>
           </address>
       </div>
+      </div>
 
-    <div class="adress-footer__map">
+    <div class="main-footer__adress-footer-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610228!2d30.32085871744385!3d59.93871650000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1651736018473!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         title="Как добраться до офиса"></iframe>
     </div>
-      </div>
 
     <div class="main-footer__background">
     <div class="main-footer__links">
@@ -241,7 +243,7 @@
         <a class="academy-link__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
 
         <a class="academy-link__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="social-links__svg" width="27" height="34"  aria-label="Перейти на сайт HTML-академии" focusable="false">
+          <svg class="academy-link__svg" width="27" height="34"  aria-label="Перейти на сайт HTML-академии" focusable="false">
             <use href="img/sprite.svg#htmlacademylogo"></use>
           </svg>
         </a>

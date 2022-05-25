@@ -6,6 +6,10 @@
   @media (min-width: @tablet-width) {
     padding: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    align-items: unset;
+  }
 }
 
 .academy-link__text {
@@ -18,21 +22,23 @@
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
-    margin-right: 22px;
+    margin-right: 25px;
   }
 }
 
 // стилизация состояний ссылок на академию
 .academy-link__logo svg {
+  min-width: 27px;
+  min-height: 34px;
   fill: @special-gray;
 }
 
-.academy-link:hover .academy-link__logo svg {
+.academy-link:hover .academy-link__svg {
   fill: @green;
 }
 
-.academy-link:active .academy-link__logo svg,
-.academy-link:active .academy-link__text {
+.academy-link:active .academy-link__svg,
+.academy-link:active {
   fill: @green;
   opacity: 0.3;
 }

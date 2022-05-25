@@ -1,26 +1,19 @@
-.main-footer {
-  @media (min-width: @desktop-width) {
-    position: relative;
-  }
-}
-
-
 .adress-footer {
   padding: 26px 20px;
   display: flex;
 
   @media (min-width: @tablet-width) {
-    padding: 61px 70px;
+    padding: 56px 40px;
     justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 56px 80px;
+    padding: 60px 80px;
     position: absolute;
     background-color: @white;
     z-index: 2;
-    top: 93px;
-    left: 110px;
+    top: 94px;
+    left: 112px;
   }
 }
 
@@ -83,18 +76,5 @@
   @media (min-width: @tablet-width) {
     margin-top: 18px;
     display: block;
-  }
-}
-
-// стили для карты
-
-.adress-footer__map iframe {
-  border: none;
-  display: block;
-  width: 100%;
-  height: 362px;
-
-  @media (min-width: @tablet-width) {
-    height: 400px;
   }
 }

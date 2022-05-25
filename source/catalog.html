@@ -9,6 +9,8 @@
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page-body">
       <header class="main-header">
@@ -30,14 +32,14 @@
 
         <div class="main-header__navigation-wrapper">
           <ul class="main-header__navigation-list menu-services-list">
-            <li class="menu-services__item">
-              <a class="menu-services__link" href="index.html">Главная</a>
+            <li class="menu-services-list__item">
+              <a class="menu-services-list__link" href="index.html">Главная</a>
             </li>
-            <li class="menu-services__item">
-              <a class="menu-services__link active-link">Каталог продукции</a>
+            <li class="menu-services-list__item">
+              <a class="menu-services-list__link menu-services-list__link-active-link">Каталог продукции</a>
             </li>
-            <li class="menu-services__item">
-              <a class="menu-services__link" href="program-form.html">Подбор программы</a>
+            <li class="menu-services-list__item">
+              <a class="menu-services-list__link" href="program-form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -299,26 +301,27 @@
 
       <div class="gift">
         <h2 class="visually-hidden">Акция для покупателя</h2>
-        <a class="gift__text-link" href="#">Закажите все и получите чехол для кота в подарок!</a>
+        <a class="gift__text-link" href="#">Закажите все и&nbsp;получите чехол для кота в подарок!</a>
       </div>
       </div>
 
       </section>
       </main>
-      <footer class="main-footer main-footer__background">
+      <footer class="main-footer main-footer-background">
       <div class="main-footer__container">
       <div class="adress-footer ">
-          <p class="adress-footer__text">приглашаем к сотрудничеству  дилеров!</p>
+          <p class="adress-footer__text">приглашаем к&nbsp;сотрудничеству  дилеров!</p>
           <address class="adress-footer__adress">ул. Большая Конюшенная, д. 19/8
             <span class="adress-footer__adress-index">Санкт-Петербург</span>
           </address>
       </div>
+      </div>
 
-    <div class="adress-footer__map">
+    <div class="main-footer__adress-footer-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610228!2d30.32085871744385!3d59.93871650000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1651736018473!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         title="Как добраться до офиса"></iframe>
     </div>
-    </div>
+
 
     <div class="main-footer__links">
 
@@ -359,7 +362,7 @@
         <a class="academy-link__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
 
         <a class="academy-link__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="social-links__svg" width="27" height="34"  aria-label="Перейти на сайт HTML-академии" focusable="false">
+          <svg class="academy-link__svg" width="27" height="34"  aria-label="Перейти на сайт HTML-академии" focusable="false">
             <use href="img/sprite.svg#htmlacademylogo"></use>
           </svg>
         </a>
