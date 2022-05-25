@@ -121,8 +121,8 @@
 
 // реализация меню только при мобильной версии
 
-@media (max-width: @mobile-width-only) {
-  .main-header__navigation--close .main-header__navigation-wrapper {
+.main-header__navigation--close .main-header__navigation-wrapper {
+  @media (max-width: @mobile-width-only) {
     display: none;
   }
 }
