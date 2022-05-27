@@ -26,6 +26,7 @@
         </a>
       </div>
 
+<!-- main-header__navigation--close - закрывает меню,  main-header__navigation--open - открывает меню. main-header__navigation--nojs для отработки меню без JS-->
     <nav class="main-header__navigation main-header__navigation--close main-header__navigation--nojs">
       <button class="main-header__navigation-toggle button-services" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -37,10 +38,10 @@
               <a class="menu-services-list__item-index menu-services-list__link menu-services-list__link-index">Главная</a>
             </li>
             <li class="menu-services-list__item">
-              <a class="menu-services-list__item-index menu-services-list__link" href="catalog.html">Каталог продукции</a>
+              <a class="menu-services-list__item-index menu-services-list__link" href="catalog.html">Каталог&nbsp;продукции</a>
             </li>
             <li class="menu-services-list__item">
-              <a class="menu-services-list__item-index menu-services-list__link" href="program-form.html">Подбор программы</a>
+              <a class="menu-services-list__item-index menu-services-list__link" href="program-form.html">Подбор&nbsp;программы</a>
             </li>
           </ul>
         </div>
@@ -75,6 +76,7 @@
       <section class="programm-offer page-container">
         <h2 class="visually-hidden">Программы нормализации веса</h2>
 
+        <!-- <ol class="programm-offer__weight-change-list"> -->
         <div class="programm-offer__weight-change programm-offer__weight-change--weight-loss">
           <div class="programm-offer__wrapper">
           <h3 class="programm-offer__title">Похудение</h3>
@@ -98,6 +100,7 @@
           <a class="programm-offer__link" href="catalog-weight-gain.html">Каталог PRO</a>
         </div>
         </div>
+
       </section>
 
       <section class="instruction page-container">
@@ -123,6 +126,7 @@
             <p class="instruction__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
             </p>
           </li>
+
         </ul>
       </section>
 
@@ -179,7 +183,7 @@
           <div class="special__range-wrapper range-changes">
             <button class="range-changes__before range-button" type="button">Было</button>
 
-            <div class="range-changes__range-bar"><span class="range-changes__dot"></span></div>
+            <div class="range-changes__range-bar"><button class="range-changes__dot" aria-label="Потяните, чтобы переключить фотографии"></button></div>
 
             <button class="range-changes__after range-button" type="button">Стало</button>
           </div>

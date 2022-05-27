@@ -13,7 +13,7 @@
     display: grid;
     grid-template-columns: repeat(2, 324px);
     column-gap: 60px;
-    row-gap: 144px;
+    row-gap: 145px;
     padding: 0 30px;
     margin-bottom: 68px;
   }
@@ -22,7 +22,7 @@
     display: grid;
     grid-template-columns: repeat(4, 245px);
     column-gap: 80px;
-    row-gap: 140px;
+    row-gap: 151px;
     padding: 0 110px;
     justify-content: unset;
     margin-bottom: 72px;
@@ -75,21 +75,21 @@
 
 .catalog__type-small {
   @media (min-width: @tablet-width) {
-    margin: -47px 36px 33px 36px;
+    margin: -49px 36px 30px 36px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: -49px 30px 31px 35px;
+    margin: -53px 30px 28px 35px;
   }
 }
 
 .catalog__type-big {
   @media (min-width: @tablet-width) {
-    margin: -74px 36px 33px 36px;
+    margin: -74px 36px 30px 36px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: -80px 30px 32px 35px;
+    margin: -84px 30px 22px 35px;
   }
 }
 // стилизация названия товара в карточке
@@ -113,8 +113,9 @@
 
   @media (min-width: @desktop-width) {
     width: 145px;
-    margin-left: 12px;
+    margin-left: 15px;
     line-height: 21px;
+    margin-bottom: 24px;
   }
 }
 
@@ -123,7 +124,7 @@
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 34px;
+    margin-bottom: 32px;
   }
 }
 
@@ -131,7 +132,7 @@
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 27px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: @desktop-width) {
@@ -165,6 +166,16 @@
   }
 }
 
+.catalog__text-wrapper {
+  @media (min-width: @tablet-width) {
+    margin-bottom: -6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
 // стилизация кнопки "заказать"
 .catalog__product-order {
   .button-order;
@@ -174,14 +185,14 @@
 
   @media (min-width: @tablet-width) {
     padding: 10px 93px;
-    margin-bottom: 33px;
+    margin-bottom: 36px;
     width: 248px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 10px 53px;
     width: 168px;
-    margin-bottom: 38px;
+    margin-bottom: 32px;
   }
 }
 
@@ -242,12 +253,12 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding: 163px 37px 36px 37px;
+    padding: 159px 22px 36px;
     border: 2px solid @basic-grey;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 160px 39px 41px;
+    padding: 155px 39px 41px;
   }
 }
 
@@ -284,6 +295,10 @@
     width: 167px;
     margin-bottom: 87px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 85px;
+  }
 }
 
 .catalog__show-more-link {
@@ -291,15 +306,13 @@
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
-  width: 279px;
   color: @dark-grey;
   background-color: @basic-grey;
-  padding: 10px 94px;
+  padding: 10px 76px;
 
   @media (min-width: @desktop-width) {
     width: 168px;
-    line-height: 0;
-    padding: 20px 39px;
+    padding: 10px 39px;
   }
 }
 // стилизация состояний серой кнопки "Показать ещё"

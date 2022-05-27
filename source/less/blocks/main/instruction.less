@@ -4,6 +4,7 @@
   padding: 0 20px;
   width: 280px;
 
+
   @media (min-width: @tablet-width) {
     margin-bottom: 90px;
     padding: 0 30px;
@@ -42,7 +43,7 @@
   }
 }
 
-// позиционарование списка инструкции
+// позиционирование списка инструкции и добавление счетчика через css
 .instruction__description-list {
   .list-type-none();
   display: flex;
@@ -53,19 +54,40 @@
     grid-template-columns: 245px 259px;
     column-gap: 136px;
     row-gap: 36px;
+    counter-reset: description-item;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    column-gap: normal;
+    column-gap: 0;
+  }
+}
+
+.instruction__description-list p {
+  @media (min-width: @tablet-width) {
+    counter-increment: description-item;
+  }
+}
+
+.instruction__description-list .instruction__description::before {
+  @media (min-width: @tablet-width) {
+    content: counter(description-item);
+    font-size: 280px;
+    width: 112px;
+    font-family: "Oswald", sans-serif;
+    color: @basic-grey;
+    top: 86px;
+    left: 118px;
+    z-index: -1;
+    position: absolute;
   }
 }
 
 // стилизация одного пункта списка
 .instruction__description-item {
-  position: relative;
   height: 60px;
 
   @media (min-width: @tablet-width) {
@@ -96,18 +118,6 @@
     background-image: url("../img/instruction-list/item-one-big.jpg");
     background-size: 80px 80px;
     background-position: 0 40px;
-
-    &::before {
-      content: "1";
-      font-size: 280px;
-      width: 112px;
-      font-family: "Oswald", sans-serif;
-      color: @basic-grey;
-      bottom: -68px;
-      left: 118px;
-      z-index: -1;
-      position: absolute;
-    }
   }
 }
 
@@ -119,18 +129,6 @@
     background-image: url("../img/instruction-list/item-two-big.jpg");
     background-size: 80px 80px;
     background-position: 0 40px;
-
-    &::before {
-      content: "2";
-      font-size: 280px;
-      width: 112px;
-      font-family: "Oswald", sans-serif;
-      color: @basic-grey;
-      bottom: -68px;
-      left: 118px;
-      z-index: -1;
-      position: absolute;
-    }
   }
 }
 
@@ -142,18 +140,6 @@
     background-image: url("../img/instruction-list/item-three-big.jpg");
     background-size: 80px 80px;
     background-position: 0 40px;
-
-    &::before {
-      content: "3";
-      font-size: 280px;
-      width: 112px;
-      font-family: "Oswald", sans-serif;
-      color: @basic-grey;
-      bottom: -68px;
-      left: 118px;
-      z-index: -1;
-      position: absolute;
-    }
   }
 }
 
@@ -165,18 +151,6 @@
     background-image: url("../img/instruction-list/item-four-big.jpg");
     background-size: 80px 80px;
     background-position: 0 40px;
-
-    &::before {
-      content: "4";
-      font-size: 280px;
-      width: 112px;
-      font-family: "Oswald", sans-serif;
-      color: @basic-grey;
-      bottom: -68px;
-      left: 118px;
-      z-index: -1;
-      position: absolute;
-    }
   }
 }
 
@@ -198,6 +172,7 @@
     line-height: 24px;
     padding: 111px 14px 57px 0;
     margin-left: 0;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
