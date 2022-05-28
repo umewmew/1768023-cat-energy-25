@@ -4,61 +4,32 @@
   line-height: 16px;
   color: @dark-grey;
 
-  display: grid;
-  grid-template-columns: 70px 70px;
-  grid-template-rows: repeat(3, min-content);
-  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
   margin-top: 18px;
+  width: 142px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
-    grid-template-columns: repeat(2, 124px);
-    margin-top: 16px;
+    width: 249px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(2, 84px);
-    margin-top: 24px;
+    width: 166px;
   }
 }
 
-.properties-list__name-weight {
-  @media (min-width: @tablet-width) {
-    padding-bottom: 9px;
-    margin: 0;
-    border-bottom: 1px solid @silver-gray;
-  }
-}
-
-.properties-list__value-weight {
-  margin: 0;
-  text-align: right;
+.properties-list__weight,
+.properties-list__taste,
+.properties-list__price {
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 9px;
     border-bottom: 1px solid @silver-gray;
-  }
-}
-
-.properties-list__name-price,
-.properties-list__name-taste {
-  @media (min-width: @tablet-width) {
-    padding-top: 7px;
-    padding-bottom: 9px;
-    margin: 0;
-    border-bottom: 1px solid @silver-gray;
-  }
-}
-
-.properties-list__value-price,
-.properties-list__value-taste {
-  margin: 0;
-  text-align: right;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 5px;
-    padding-bottom: 9px;
-    border-bottom: 1px solid @silver-gray;
+    padding-bottom: 7px;
+    margin-bottom: 9px;
   }
 }

@@ -1,5 +1,6 @@
 // фоновый цвет
 .special {
+  width: 100vw;
   background-color: @light-gray;
 
   @media (min-width: @tablet-width) {
@@ -14,7 +15,7 @@
 .special__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 25px 20px 45px 20px;
+  padding-bottom: 45px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -38,6 +39,7 @@
 .special__text-wrapper {
   display: flex;
   flex-direction: column;
+  padding: 25px 20px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 56px;

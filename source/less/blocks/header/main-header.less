@@ -1,12 +1,15 @@
 .main-header {
-  display: flex;
-  align-items: center;
-  width: 280px;
+  width: 320px;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 16px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     padding-top: 25px;
     width: 708px;
   }
@@ -25,7 +28,9 @@
   border: none;
   cursor: pointer;
   background-color: inherit;
-  position: relative;
+  position: absolute;
+  top: 4px;
+  right: 19px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -35,8 +40,8 @@
 .main-header__navigation--close .main-header__navigation-toggle::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -5px;
+  right: 0;
   width: 24px;
   height: 24px;
   background-image: url("../img/header-img/menu-closed.svg");
@@ -46,8 +51,8 @@
 .main-header__navigation--open .main-header__navigation-toggle::before {
   content: "";
   position: absolute;
-  bottom: 1px;
-  left: 3px;
+  bottom: -6px;
+  right: 0;
   width: 24px;
   height: 24px;
   background-image: url("../img/header-img/menu-opened.svg");
@@ -58,12 +63,13 @@
 .main-header__logo-wrapper {
   width: 190px;
   height: 38px;
-  margin-right: 65px;
+  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     width: 174px;
     height: 52px;
-    margin-right: 94px;
+    margin-right: 92px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -100,10 +106,7 @@
 // стилизация меню пользователя
 .main-header__navigation-wrapper {
   min-width: 320px;
-  position: absolute;
-  right: 0;
-  top: 61px;
-  z-index: 10;
+  position: relative;
   background-color: @white;
 
   @media (min-width: @tablet-width) {
@@ -121,10 +124,17 @@
 
 // реализация меню только при мобильной версии
 
-.main-header__navigation--close .main-header__navigation-wrapper {
+.main-header__navigation--close .menu-services-list__item {
   @media (max-width: @mobile-width-only) {
     display: none;
   }
+}
+
+.main-header__navigation--open .main-header__navigation-wrapper {
+  position: absolute;
+  top: 54px;
+  right: 0;
+  z-index: 10;
 }
 
 // стили при отключенном js
@@ -135,9 +145,10 @@
 .main-header__navigation--nojs .main-header__navigation-wrapper {
   position: static;
   min-height: 0;
+  margin-top: 16px;
 }
 
-.main-header__navigation--nojs .menu-services__item {
+.main-header__navigation--nojs .menu-services-list__item {
   display: block;
 }
 

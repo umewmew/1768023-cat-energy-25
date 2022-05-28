@@ -1,5 +1,6 @@
 .menu-services-list {
   .list-type-none();
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -11,14 +12,17 @@
     width: 440px;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    gap: 35px;
+    column-gap: 35px;
     padding-top: 10px;
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 0;
     width: 478px;
-    gap: 32px;
-    padding-top: 6px;
+    padding-top: 3px;
   }
 }
 
@@ -32,6 +36,15 @@
   @media (min-width: @tablet-width) {
     border: none;
     padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: min-content;
+    margin-right: 32px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -78,7 +91,7 @@
 
   @media (min-width: @tablet-width) {
     border-bottom: 2px solid @green;
-    padding-bottom: 8px;
+    padding-bottom: 6px;
   }
 
   @media (min-width: @desktop-width) {

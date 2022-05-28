@@ -1,4 +1,10 @@
 .promo {
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: unset;
+  }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 135px;
     position: relative;
@@ -14,6 +20,7 @@
   background-position: auto;
   background-repeat: no-repeat;
   z-index: -3;
+
 
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient(@green-light, @green-light), url("../img/promo-cat-mobile@2x.jpg");
@@ -35,40 +42,81 @@
     background-image: linear-gradient(@green-light, @green-light), url("../img/promo-cat-desktop-2.jpg");
     background-repeat: no-repeat;
     background-size: 1044px 695px;
-    background-position-x: -14px;
+    background-position-x: -5px;
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(@green-light, @green-light), url("../img/promo-cat-desktop-2@2x.jpg");
-      background-size: 720px auto;
+      background-size: 1044px auto;
     }
   }
 }
 
+// стилизация картинки товара на главной странице
 .promo__container {
   width: 320px;
-  margin: 0 auto;
   margin-bottom: 20px;
   position: relative;
 
   display: flex;
   flex-direction: column;
 
+  background-image: url("../img/main-product-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 280px 270px;
+  background-position: center 167px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-product-mobile@2x.png");
+  }
+
   @media (min-width: @tablet-width) {
-    width: 709px;
-    margin-bottom: 0;
+    background-image: url("../img/main-product-tablet.jpg");
+    background-size: 709px 609px;
+    background-position: center 255px;
+
+    margin: 0;
+    width: initial;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-product-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: unset;
+    background-image: url("../img/main-product-desktop.png");
+    background-size: 552px 499px;
+
+    background-position: 558px 14px;
+    width: initial;
     max-width: 1220px;
     flex-direction: row;
     position: none;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-product-desktop@2x.png");
+    }
   }
 }
 
+// стилизация текстового блока заголовка
 .promo__text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    align-items: initial;
+    margin: 0 auto;
+    margin-left: 340px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 113px;
+  }
 }
 
 .promo__title {
@@ -91,14 +139,13 @@
     color: @black;
 
     padding-top: 49px;
-    padding-left: 87px;
-    margin-bottom: 42px;
+    margin-bottom: 18px;
 
     text-align: left;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 40px;
+    margin-bottom: 12px;
     padding: 0;
     padding-top: 97px;
     padding-left: 80px;
@@ -114,7 +161,7 @@
 
   margin: 0;
   margin-top: 25px;
-  margin-bottom: 29px;
+  margin-bottom: 300px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -124,40 +171,12 @@
     text-align: left;
 
     padding: 0;
-    padding-left: 89px;
-    margin-bottom: 19px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 80px;
-  }
-}
-
-.promo__delivery-block {
-  margin: 0 auto;
-  z-index: 1;
-
-  @media (min-width: @tablet-width) {
-    position: relative;
-    margin: 0;
-  }
-}
-
-// стилизация картинки с продукцией товара
-.promo__image {
-  display: block;
-  z-index: 1;
-
-  @media (min-width: @tablet-width) {
-    min-width: 709px;
-    min-height: 609px;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-width: 552px;
-    min-height: 499px;
-    margin-left: -45px;
-    margin-top: 14px;
+    margin-bottom: 51px;
   }
 }
 
@@ -165,23 +184,23 @@
 .promo__link-programm {
   margin-top: 3px;
   width: 280px;
-  height: 40px;
+  min-height: 40px;
   padding: 11px 44px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    height: 54px;
+    min-height: 54px;
     width: 244px;
     top: 27px;
     left: 90px;
     padding: 15px 26px;
-    position: absolute;
     z-index: 1;
+    margin-bottom: 525px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 326px;
-    left: -416px;
+    margin-left: 82px;
+    margin-bottom: 134px;
   }
 }
