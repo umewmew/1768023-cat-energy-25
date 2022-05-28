@@ -76,6 +76,24 @@
   opacity: 0.3;
 }
 
+.offer-select__field[type="radio"]:focus-visible + .offer-select__control-mark::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  outline: 1px solid @black;
+  outline-offset: 2px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
 // стилизация выбранного пункта
 .offer-select__field[type="radio"]:checked + .offer-select__control-mark::before {
   content: "";
